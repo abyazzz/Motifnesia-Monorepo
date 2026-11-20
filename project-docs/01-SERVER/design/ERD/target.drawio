@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" compressed="false">
+  <diagram id="p1" name="Pembayaran dan pengiriman">
+    <mxGraphModel dx="1422" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2100" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="&lt;b&gt;orders&lt;/b&gt;&lt;hr&gt;id  existing PK" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="35" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="&lt;b&gt;PROPOSED gateway_payment_attempts&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;order_id  ref FK&lt;br&gt;provider_reference  identifier &lt;br&gt;status  status_code &lt;br&gt;expires_at  instant &lt;br&gt;paid_at  instant &lt;br&gt;amount  amount " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="455" y="35" width="330" height="171" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="&lt;b&gt;PROPOSED gateway_payment_events&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;attempt_id  ref FK&lt;br&gt;provider_event_id  identifier &lt;br&gt;received_at  instant &lt;br&gt;processing_status  status_code &lt;br&gt;payload_fingerprint  digest " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="880" y="35" width="330" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="&lt;b&gt;order_items&lt;/b&gt;&lt;hr&gt;id  existing PK" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="1305" y="35" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="&lt;b&gt;PROPOSED stock_reservations&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;order_item_id  ref FK&lt;br&gt;variant_stock_id  ref FK&lt;br&gt;qty  quantity &lt;br&gt;expires_at  instant &lt;br&gt;state  status_code " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="296" width="330" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="&lt;b&gt;product_size_stocks&lt;/b&gt;&lt;hr&gt;id  existing PK" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="455" y="296" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" vertex="1" value="&lt;b&gt;PROPOSED order_shipments&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;order_id  ref FK&lt;br&gt;shipping_method_id  ref FK&lt;br&gt;tracking_number  text &lt;br&gt;recorded_by  ref FK&lt;br&gt;shipped_at  instant &lt;br&gt;received_at  instant " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="880" y="296" width="330" height="171" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" vertex="1" value="&lt;b&gt;metode_pengiriman&lt;/b&gt;&lt;hr&gt;id  existing PK" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="1305" y="296" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" vertex="1" value="&lt;b&gt;users&lt;/b&gt;&lt;hr&gt;id  existing PK" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="557" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="1" edge="1" source="n1" target="n2" value="order_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" edge="1" source="n2" target="n3" value="attempt_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" edge="1" source="n4" target="n5" value="order_item_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" parent="1" edge="1" source="n6" target="n5" value="variant_stock_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" parent="1" edge="1" source="n1" target="n7" value="order_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" parent="1" edge="1" source="n8" target="n7" value="shipping_method_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" parent="1" edge="1" source="n9" target="n7" value="recorded_by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p2" name="PO dan penerimaan">
+    <mxGraphModel dx="1422" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2100" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="&lt;b&gt;stock_procurements&lt;/b&gt;&lt;hr&gt;id  existing PK" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="35" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="&lt;b&gt;PROPOSED procurement_documents&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;procurement_id  ref FK&lt;br&gt;po_number  identifier &lt;br&gt;document_version  identifier &lt;br&gt;created_by  ref FK&lt;br&gt;document_path  private_object &lt;br&gt;sent_at  instant " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="455" y="35" width="330" height="171" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="&lt;b&gt;users&lt;/b&gt;&lt;hr&gt;id  existing PK" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="880" y="35" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="&lt;b&gt;PROPOSED procurement_confirmations&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;procurement_id  ref FK&lt;br&gt;recorded_by  ref FK&lt;br&gt;external_channel  text &lt;br&gt;response_notes  text &lt;br&gt;confirmed_at  instant " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="1305" y="35" width="330" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="&lt;b&gt;PROPOSED procurement_receipts&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;procurement_id  ref FK&lt;br&gt;received_by  ref FK&lt;br&gt;received_at  instant &lt;br&gt;posting_status  status_code " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="296" width="330" height="133" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="&lt;b&gt;PROPOSED procurement_receipt_items&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;receipt_id  ref FK&lt;br&gt;procurement_item_id  ref FK&lt;br&gt;variant  text &lt;br&gt;received_qty  quantity &lt;br&gt;unit_cost  amount " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="455" y="296" width="330" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" vertex="1" value="&lt;b&gt;stock_procurement_items&lt;/b&gt;&lt;hr&gt;id  existing PK" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="880" y="296" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="1" edge="1" source="n1" target="n2" value="procurement_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" edge="1" source="n3" target="n2" value="created_by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" edge="1" source="n1" target="n4" value="procurement_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" parent="1" edge="1" source="n3" target="n4" value="recorded_by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" parent="1" edge="1" source="n1" target="n5" value="procurement_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" parent="1" edge="1" source="n3" target="n5" value="received_by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" parent="1" edge="1" source="n5" target="n6" value="receipt_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" parent="1" edge="1" source="n7" target="n6" value="procurement_item_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p3" name="Retur dan refund">
+    <mxGraphModel dx="1422" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2100" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="&lt;b&gt;returns&lt;/b&gt;&lt;hr&gt;id  existing PK" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="35" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="&lt;b&gt;PROPOSED return_inspections&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;return_id  ref FK&lt;br&gt;inspected_by  ref FK&lt;br&gt;inspected_at  instant &lt;br&gt;condition_code  text &lt;br&gt;sellable_qty  quantity &lt;br&gt;notes  text " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="455" y="35" width="330" height="171" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="&lt;b&gt;users&lt;/b&gt;&lt;hr&gt;id  existing PK" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="880" y="35" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="&lt;b&gt;PROPOSED return_resolutions&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;return_id  ref FK&lt;br&gt;decided_by  ref FK&lt;br&gt;resolution_type  status_code &lt;br&gt;replacement_item_id  ref FK&lt;br&gt;status  status_code " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="1305" y="35" width="330" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="&lt;b&gt;order_items&lt;/b&gt;&lt;hr&gt;id  existing PK" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="296" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="&lt;b&gt;PROPOSED refund_records&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;resolution_id  ref FK&lt;br&gt;recorded_by  ref FK&lt;br&gt;amount  amount &lt;br&gt;proof_path  private_object &lt;br&gt;paid_at  instant &lt;br&gt;status  status_code " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="455" y="296" width="330" height="171" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="1" edge="1" source="n1" target="n2" value="return_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" edge="1" source="n3" target="n2" value="inspected_by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" edge="1" source="n1" target="n4" value="return_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" parent="1" edge="1" source="n3" target="n4" value="decided_by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" parent="1" edge="1" source="n5" target="n4" value="replacement_item_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERzeroToOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" parent="1" edge="1" source="n4" target="n6" value="resolution_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" parent="1" edge="1" source="n3" target="n6" value="recorded_by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p4" name="Membership, broadcast dan akuntabilitas">
+    <mxGraphModel dx="1422" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2100" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="&lt;b&gt;users&lt;/b&gt;&lt;hr&gt;id  existing PK" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="35" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="&lt;b&gt;PROPOSED membership_programs&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;updated_by  ref FK&lt;br&gt;label  text &lt;br&gt;status  status_code &lt;br&gt;effective_at  instant &lt;br&gt;policy_version  text " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="455" y="35" width="330" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="&lt;b&gt;PROPOSED promotion_broadcasts&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;created_by  ref FK&lt;br&gt;subject  text &lt;br&gt;content  text &lt;br&gt;queued_at  instant &lt;br&gt;status  status_code " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="880" y="35" width="330" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="&lt;b&gt;PROPOSED promotion_deliveries&lt;/b&gt;&lt;hr&gt;id  key PK&lt;br&gt;broadcast_id  ref FK&lt;br&gt;recipient_user_id  ref FK&lt;br&gt;delivery_status  status_code &lt;br&gt;attempted_at  instant &lt;br&gt;provider_ref  identifier " style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="1305" y="35" width="330" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="1" edge="1" source="n1" target="n2" value="updated_by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" edge="1" source="n1" target="n3" value="created_by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" edge="1" source="n3" target="n4" value="broadcast_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" parent="1" edge="1" source="n1" target="n4" value="recipient_user_id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;startArrow=ERmandOne;endArrow=ERzeroToMany;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

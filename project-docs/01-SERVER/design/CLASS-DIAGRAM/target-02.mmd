@@ -1,0 +1,31 @@
+classDiagram
+    direction TB
+    class PaymentInitiationController["PROPOSED PaymentInitiationController"] {
+        +start()
+        +showStatus()
+    }
+    class GatewayNotificationController["PROPOSED GatewayNotificationController"] {
+        +receive()
+    }
+    class PaymentGatewayAdapter["PROPOSED PaymentGatewayAdapter"] {
+        +createAttempt()
+        +validateEvent()
+    }
+    class PaymentReconciliationService["PROPOSED PaymentReconciliationService"] {
+        +recordEvent()
+        +applyConfirmedPayment()
+    }
+    class StockReservationService["PROPOSED StockReservationService"] {
+        +reserve()
+        +releaseExpired()
+    }
+    class ShipmentService["PROPOSED ShipmentService"] {
+        +recordPacking()
+        +recordTracking()
+        +confirmReceived()
+    }
+    PaymentInitiationController ..> PaymentGatewayAdapter : dependensi usulan
+    PaymentInitiationController ..> PaymentReconciliationService : dependensi usulan
+    GatewayNotificationController ..> PaymentGatewayAdapter : dependensi usulan
+    GatewayNotificationController ..> PaymentReconciliationService : dependensi usulan
+    PaymentReconciliationService ..> StockReservationService : dependensi usulan

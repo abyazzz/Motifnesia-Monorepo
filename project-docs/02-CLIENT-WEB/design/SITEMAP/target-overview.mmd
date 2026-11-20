@@ -1,0 +1,11 @@
+flowchart LR
+    P["Katalog publik"] -->|"Detail, filter, ulasan"| G["Guest"]
+    G -->|"Registrasi atau masuk"| C["Customer"]
+    C --> O["Keranjang, checkout, pembayaran dan riwayat"]
+    C --> A["Akun, retur, chat, favorit dan membership"]
+    N["Admin masuk"] --> OW["Owner: akun internal dan kemampuan yang ditetapkan"]
+    N --> FI["Finance: pembayaran, refund dan laporan"]
+    N --> K["Kasir: pesanan, pelanggan, retur, chat, promosi dan membership"]
+    N --> GD["Gudang: katalog, pengadaan, stok, pengiriman dan inspeksi"]
+    S["Supplier eksternal"] -.-> GD
+    PG["Gateway eksternal"] -.-> SR["Server: pembayaran dan callback"]

@@ -1,0 +1,11 @@
+flowchart LR
+    P1["Buka katalog"]
+    P2["Cari dan filter"]
+    P1 --> P2
+    P3["Buka detail produk"]
+    P2 --> P3
+    P4["Gudang atau Owner mengelola produk"]
+    P3 --> P4
+    P2 -.-> E["Validasi atau akses ditolak"]
+    E --> P1
+    P3 -.-> R["Tampilkan status yang telah dikonfirmasi server"]

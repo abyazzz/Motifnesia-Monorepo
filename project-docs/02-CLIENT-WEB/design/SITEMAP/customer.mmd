@@ -1,0 +1,29 @@
+flowchart LR
+    E["Customer"] --> H["Entry Web sesuai role"]
+    H --> C1["Katalog dan pesanan"]
+    C1 --> P4["Koleksi Batik"]
+    C1 --> P5["Detail Produk"]
+    C1 --> P6["Keranjang"]
+    C1 --> P7["Favorit"]
+    C1 --> P8["Checkout"]
+    C1 --> P9["Pembayaran"]
+    C1 --> P10["Ringkasan Pesanan"]
+    H --> C2["Akun dan layanan pelanggan"]
+    C2 --> P11["Akun Saya"]
+    C2 --> P12["Ubah Profil"]
+    C2 --> P13["Notifikasi"]
+    C2 --> P14["Membership"]
+    C2 --> P15["Riwayat Poin"]
+    C2 --> P16["Voucher Saya"]
+    C2 --> P17["Retur Saya"]
+    C2 --> P18["Ajukan Retur"]
+    C2 --> P19["Bantuan & Chat"]
+    P4 --> P5
+    P5 --> P6
+    P6 --> P8
+    P8 --> P9
+    P9 --> P10
+    P11 --> P12
+    P11 --> P18
+    P14 --> P15
+    P14 --> P16

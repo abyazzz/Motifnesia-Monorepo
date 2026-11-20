@@ -1,0 +1,58 @@
+classDiagram
+    direction TB
+    class App_Models_StockMovement["StockMovement"] {
+        +produk()
+        +user()
+    }
+    class App_Models_StockOpname["StockOpname"] {
+        +produk()
+        +adjustedBy()
+    }
+    class App_Models_StockProcurement["StockProcurement"] {
+        +statusLabels()
+        +supplier()
+        +items()
+        +creator()
+        +confirmer()
+        +applier()
+        +getStatusLabelAttribute()
+        +getTotalQtyAttribute()
+    }
+    class App_Models_StockProcurementItem["StockProcurementItem"] {
+        +procurement()
+        +produk()
+        +sizeQuantities()
+    }
+    class App_Models_Supplier["Supplier"] {
+        +user()
+        +procurements()
+    }
+    class App_Models_WarehouseStock["WarehouseStock"] {
+        +produk()
+        +updater()
+    }
+    class Illuminate_Database_Eloquent_Model["Model"] {
+    }
+    class App_Models_Produk["Produk"] {
+    }
+    class App_Models_User["User"] {
+    }
+    App_Models_StockMovement --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_StockMovement --> App_Models_Produk : relasi
+    App_Models_StockMovement --> App_Models_User : relasi
+    App_Models_StockOpname --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_StockOpname --> App_Models_Produk : relasi
+    App_Models_StockOpname --> App_Models_User : relasi
+    App_Models_StockProcurement --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_StockProcurement --> App_Models_Supplier : relasi
+    App_Models_StockProcurement --> App_Models_StockProcurementItem : relasi
+    App_Models_StockProcurement --> App_Models_User : relasi
+    App_Models_StockProcurementItem --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_StockProcurementItem --> App_Models_StockProcurement : relasi
+    App_Models_StockProcurementItem --> App_Models_Produk : relasi
+    App_Models_Supplier --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_Supplier --> App_Models_User : relasi
+    App_Models_Supplier --> App_Models_StockProcurement : relasi
+    App_Models_WarehouseStock --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_WarehouseStock --> App_Models_Produk : relasi
+    App_Models_WarehouseStock --> App_Models_User : relasi

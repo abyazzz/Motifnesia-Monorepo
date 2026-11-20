@@ -1,0 +1,13 @@
+flowchart LR
+    P1["Keranjang, pilih alamat, checkout"]
+    P2["Server buat order dan reservasi"]
+    P1 --> P2
+    P3["Pilih metode dan buka instruksi bayar"]
+    P2 --> P3
+    P4["Kembali ke aplikasi dan refresh status server"]
+    P3 --> P4
+    P5["Pantau status pesanan dan pembayaran"]
+    P4 --> P5
+    P2 -.-> E["Validasi atau akses ditolak"]
+    E --> P1
+    P3 -.-> R["Tampilkan status yang telah dikonfirmasi server"]

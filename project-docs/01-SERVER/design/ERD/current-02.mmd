@@ -1,0 +1,88 @@
+erDiagram
+    checkout["checkout"] {
+        increments id PK
+        foreignId user_id FK
+        unsignedInteger status_id FK
+    }
+    checkout_items["checkout_items"] {
+        increments id PK
+        unsignedInteger checkout_id FK
+        unsignedInteger product_id FK
+    }
+    delivery_status["delivery_status"] {
+        id id PK
+    }
+    metode_pembayaran["metode_pembayaran"] {
+        id id PK
+    }
+    metode_pengiriman["metode_pengiriman"] {
+        id id PK
+    }
+    order_items["order_items"] {
+        id id PK
+        foreignId order_id FK
+        unsignedInteger produk_id FK
+    }
+    order_reviews["order_reviews"] {
+        id id PK
+        foreignId user_id FK
+        foreignId order_item_id FK
+        foreignId order_id FK
+        unsignedInteger produk_id FK
+        foreignId moderated_by FK
+    }
+    order_status_history["order_status_history"] {
+        id id PK
+        foreignId order_id FK
+        foreignId delivery_status_id FK
+    }
+    orders["orders"] {
+        id id PK
+        foreignId user_id FK
+        string order_number UK
+        foreignId metode_pengiriman_id FK
+        foreignId metode_pembayaran_id FK
+        foreignId delivery_status_id FK
+        foreignId membership_redemption_id FK
+    }
+    returns["returns"] {
+        id id PK
+        foreignId user_id FK
+        foreignId order_id FK
+        foreignId order_item_id FK
+        unsignedInteger produk_id FK
+    }
+    status_transaksi["status_transaksi"] {
+        increments id PK
+    }
+    produk["produk"] {
+        increments id PK
+    }
+    user_reward_redemptions["user_reward_redemptions"] {
+        id id PK
+    }
+    users["users"] {
+        id id PK
+    }
+    users ||..o{ orders : "user_id"
+    metode_pengiriman ||..o{ orders : "metode_pengiriman_id"
+    metode_pembayaran ||..o{ orders : "metode_pembayaran_id"
+    delivery_status ||..o{ orders : "delivery_status_id"
+    orders ||..o{ order_items : "order_id"
+    produk ||..o{ order_items : "produk_id"
+    orders ||..o{ order_status_history : "order_id"
+    delivery_status ||..o{ order_status_history : "delivery_status_id"
+    users ||..o{ checkout : "user_id"
+    status_transaksi ||..o{ checkout : "status_id"
+    checkout ||..o{ checkout_items : "checkout_id"
+    produk ||..o{ checkout_items : "product_id"
+    users ||..o{ order_reviews : "user_id"
+    order_items ||..o{ order_reviews : "order_item_id"
+    orders ||..o{ order_reviews : "order_id"
+    produk ||..o{ order_reviews : "produk_id"
+    users ||..o{ returns : "user_id"
+    orders ||..o{ returns : "order_id"
+    order_items ||..o{ returns : "order_item_id"
+    produk ||..o{ returns : "produk_id"
+    user_reward_redemptions |o..o{ orders : "membership_redemption_id"
+    users |o..o{ order_reviews : "moderated_by"

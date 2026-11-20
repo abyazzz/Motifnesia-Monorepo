@@ -1,0 +1,44 @@
+erDiagram
+    chat_messages["chat_messages"] {
+        id id PK
+        foreignId chat_id FK
+        foreignId sender_id FK
+    }
+    chats["chats"] {
+        id id PK
+        foreignId user_id FK
+        foreignId admin_id FK
+    }
+    membership_rewards["membership_rewards"] {
+        id id PK
+    }
+    notifications["notifications"] {
+        id id PK
+        foreignId user_id FK
+    }
+    point_transactions["point_transactions"] {
+        id id PK
+        foreignId user_id FK
+        foreignId order_id FK
+    }
+    user_reward_redemptions["user_reward_redemptions"] {
+        id id PK
+        foreignId user_id FK
+        foreignId reward_id FK
+        string voucher_code UK
+    }
+    orders["orders"] {
+        id id PK
+    }
+    users["users"] {
+        id id PK
+    }
+    users |o..o{ notifications : "user_id"
+    users ||..o{ chats : "user_id"
+    users |o..o{ chats : "admin_id"
+    chats ||..o{ chat_messages : "chat_id"
+    users ||..o{ chat_messages : "sender_id"
+    users ||..o{ point_transactions : "user_id"
+    orders |o..o{ point_transactions : "order_id"
+    users ||..o{ user_reward_redemptions : "user_id"
+    membership_rewards ||..o{ user_reward_redemptions : "reward_id"

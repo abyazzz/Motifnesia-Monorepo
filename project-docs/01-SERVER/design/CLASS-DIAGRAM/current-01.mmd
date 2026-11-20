@@ -1,0 +1,29 @@
+classDiagram
+    direction TB
+    class App_Console_Commands_ReleaseExpiredOrdersStock["ReleaseExpiredOrdersStock"] {
+        +handle()
+    }
+    class Illuminate_Console_Command["Command"] {
+    }
+    class App_Models_Order["Order"] {
+    }
+    class App_Models_OrderStatusHistory["OrderStatusHistory"] {
+    }
+    class App_Models_ProductSizeStock["ProductSizeStock"] {
+    }
+    class App_Models_Produk["Produk"] {
+    }
+    class App_Models_UserRewardRedemption["UserRewardRedemption"] {
+    }
+    class App_Models_Notification["Notification"] {
+    }
+    class App_Support_WebApi_FrontendUrl["FrontendUrl"] {
+    }
+    App_Console_Commands_ReleaseExpiredOrdersStock --|> Illuminate_Console_Command : extends
+    App_Console_Commands_ReleaseExpiredOrdersStock ..> App_Models_Order : dependensi
+    App_Console_Commands_ReleaseExpiredOrdersStock ..> App_Models_OrderStatusHistory : dependensi
+    App_Console_Commands_ReleaseExpiredOrdersStock ..> App_Models_ProductSizeStock : dependensi
+    App_Console_Commands_ReleaseExpiredOrdersStock ..> App_Models_Produk : dependensi
+    App_Console_Commands_ReleaseExpiredOrdersStock ..> App_Models_UserRewardRedemption : dependensi
+    App_Console_Commands_ReleaseExpiredOrdersStock ..> App_Models_Notification : dependensi
+    App_Console_Commands_ReleaseExpiredOrdersStock ..> App_Support_WebApi_FrontendUrl : dependensi

@@ -1,0 +1,11 @@
+flowchart LR
+    P1["Finance atau Owner buka laporan jika scope rilis disetujui"]
+    P2["Pilih periode pembayaran berhasil"]
+    P1 --> P2
+    P3["Tampilkan ringkasan penjualan dan refund"]
+    P2 --> P3
+    P4["Buka detail atau unduh sesuai kemampuan"]
+    P3 --> P4
+    P2 -.-> E["Validasi atau akses ditolak"]
+    E --> P1
+    P3 -.-> R["Tampilkan status yang telah dikonfirmasi server"]

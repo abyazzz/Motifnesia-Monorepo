@@ -1,0 +1,50 @@
+erDiagram
+    stock_procurements["stock_procurements"] {
+        existing id PK
+    }
+    procurement_documents["PROPOSED procurement_documents"] {
+        key id PK
+        ref procurement_id FK
+        identifier po_number
+        identifier document_version
+        ref created_by FK
+        private_object document_path
+        instant sent_at
+    }
+    users["users"] {
+        existing id PK
+    }
+    procurement_confirmations["PROPOSED procurement_confirmations"] {
+        key id PK
+        ref procurement_id FK
+        ref recorded_by FK
+        text external_channel
+        text response_notes
+        instant confirmed_at
+    }
+    procurement_receipts["PROPOSED procurement_receipts"] {
+        key id PK
+        ref procurement_id FK
+        ref received_by FK
+        instant received_at
+        status_code posting_status
+    }
+    procurement_receipt_items["PROPOSED procurement_receipt_items"] {
+        key id PK
+        ref receipt_id FK
+        ref procurement_item_id FK
+        text variant
+        quantity received_qty
+        amount unit_cost
+    }
+    stock_procurement_items["stock_procurement_items"] {
+        existing id PK
+    }
+    stock_procurements ||..o{ procurement_documents : "procurement_id"
+    users ||..o{ procurement_documents : "created_by"
+    stock_procurements ||..o{ procurement_confirmations : "procurement_id"
+    users ||..o{ procurement_confirmations : "recorded_by"
+    stock_procurements ||..o{ procurement_receipts : "procurement_id"
+    users ||..o{ procurement_receipts : "received_by"
+    procurement_receipts ||..o{ procurement_receipt_items : "receipt_id"
+    stock_procurement_items ||..o{ procurement_receipt_items : "procurement_item_id"

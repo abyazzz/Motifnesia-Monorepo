@@ -1,0 +1,57 @@
+erDiagram
+    orders["orders"] {
+        existing id PK
+    }
+    gateway_payment_attempts["PROPOSED gateway_payment_attempts"] {
+        key id PK
+        ref order_id FK
+        identifier provider_reference
+        status_code status
+        instant expires_at
+        instant paid_at
+        amount amount
+    }
+    gateway_payment_events["PROPOSED gateway_payment_events"] {
+        key id PK
+        ref attempt_id FK
+        identifier provider_event_id
+        instant received_at
+        status_code processing_status
+        digest payload_fingerprint
+    }
+    order_items["order_items"] {
+        existing id PK
+    }
+    stock_reservations["PROPOSED stock_reservations"] {
+        key id PK
+        ref order_item_id FK
+        ref variant_stock_id FK
+        quantity qty
+        instant expires_at
+        status_code state
+    }
+    product_size_stocks["product_size_stocks"] {
+        existing id PK
+    }
+    order_shipments["PROPOSED order_shipments"] {
+        key id PK
+        ref order_id FK
+        ref shipping_method_id FK
+        text tracking_number
+        ref recorded_by FK
+        instant shipped_at
+        instant received_at
+    }
+    metode_pengiriman["metode_pengiriman"] {
+        existing id PK
+    }
+    users["users"] {
+        existing id PK
+    }
+    orders ||..o{ gateway_payment_attempts : "order_id"
+    gateway_payment_attempts ||..o{ gateway_payment_events : "attempt_id"
+    order_items ||..o{ stock_reservations : "order_item_id"
+    product_size_stocks ||..o{ stock_reservations : "variant_stock_id"
+    orders ||..o{ order_shipments : "order_id"
+    metode_pengiriman ||..o{ order_shipments : "shipping_method_id"
+    users ||..o{ order_shipments : "recorded_by"

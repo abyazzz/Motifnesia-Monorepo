@@ -1,0 +1,26 @@
+classDiagram
+    direction TB
+    class PasswordRecoveryController["PROPOSED PasswordRecoveryController"] {
+        +requestReset()
+        +confirmReset()
+    }
+    class StaffAccessController["PROPOSED StaffAccessController"] {
+        +index()
+        +updateRole()
+        +deactivate()
+    }
+    class ReviewRemovalController["PROPOSED ReviewRemovalController"] {
+        +destroyPublished()
+    }
+    class CustomerNotificationController["PROPOSED CustomerNotificationController"] {
+        +destroyOwned()
+    }
+    class PromotionBroadcastService["PROPOSED PromotionBroadcastService"] {
+        +prepare()
+        +dispatch()
+        +recordResult()
+    }
+    class MembershipProgramService["PROPOSED MembershipProgramService"] {
+        +updatePolicy()
+        +reverseAward()
+    }

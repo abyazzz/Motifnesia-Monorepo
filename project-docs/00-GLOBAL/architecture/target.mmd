@@ -1,0 +1,10 @@
+flowchart LR
+    W["Client Web"] --> A["MotifNesia Server"]
+    F["Client Mobile"] --> A
+    A --> D[("Database terpusat")]
+    A -->|"Inisiasi"| PG["Payment Gateway"]
+    PG -->|"Notifikasi hasil"| A
+    S["Supplier eksternal"] -->|"Konfirmasi via kanal eksternal"| G["Admin Gudang / Owner"]
+    K["Jasa Pengiriman"] -->|"Informasi resi"| G
+    G -->|"Catat konfirmasi, penerimaan, dan resi"| A
+    X["Admin Finance"] -->|"Catat refund manual dan bukti"| A

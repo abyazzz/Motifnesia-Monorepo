@@ -1,0 +1,32 @@
+erDiagram
+    users["users"] {
+        existing id PK
+    }
+    membership_programs["PROPOSED membership_programs"] {
+        key id PK
+        ref updated_by FK
+        text label
+        status_code status
+        instant effective_at
+        text policy_version
+    }
+    promotion_broadcasts["PROPOSED promotion_broadcasts"] {
+        key id PK
+        ref created_by FK
+        text subject
+        text content
+        instant queued_at
+        status_code status
+    }
+    promotion_deliveries["PROPOSED promotion_deliveries"] {
+        key id PK
+        ref broadcast_id FK
+        ref recipient_user_id FK
+        status_code delivery_status
+        instant attempted_at
+        identifier provider_ref
+    }
+    users ||..o{ membership_programs : "updated_by"
+    users ||..o{ promotion_broadcasts : "created_by"
+    promotion_broadcasts ||..o{ promotion_deliveries : "broadcast_id"
+    users ||..o{ promotion_deliveries : "recipient_user_id"

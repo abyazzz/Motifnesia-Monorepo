@@ -1,0 +1,33 @@
+classDiagram
+    direction TB
+    class App_Models_ProductOrder["ProductOrder"] {
+        +user()
+        +metodePengiriman()
+        +metodePembayaran()
+        +details()
+    }
+    class App_Models_ProductOrderDetail["ProductOrderDetail"] {
+        +order()
+        +produk()
+    }
+    class App_Models_ProductOrderItem["ProductOrderItem"] {
+    }
+    class Illuminate_Database_Eloquent_Model["Model"] {
+    }
+    class App_Models_User["User"] {
+    }
+    class App_Models_MetodePengiriman["MetodePengiriman"] {
+    }
+    class App_Models_MetodePembayaran["MetodePembayaran"] {
+    }
+    class App_Models_Produk["Produk"] {
+    }
+    App_Models_ProductOrder --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_ProductOrder --> App_Models_User : relasi
+    App_Models_ProductOrder --> App_Models_MetodePengiriman : relasi
+    App_Models_ProductOrder --> App_Models_MetodePembayaran : relasi
+    App_Models_ProductOrder --> App_Models_ProductOrderDetail : relasi
+    App_Models_ProductOrderDetail --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_ProductOrderDetail --> App_Models_ProductOrder : relasi
+    App_Models_ProductOrderDetail --> App_Models_Produk : relasi
+    App_Models_ProductOrderItem --|> Illuminate_Database_Eloquent_Model : extends

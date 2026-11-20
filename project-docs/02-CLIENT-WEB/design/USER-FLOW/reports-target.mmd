@@ -1,0 +1,11 @@
+flowchart LR
+    P1["Finance atau Owner buka laporan"]
+    P2["Tentukan periode pembayaran berhasil"]
+    P1 --> P2
+    P3["Server rangkum penjualan dan refund terpisah"]
+    P2 --> P3
+    P4["Evaluasi dan ekspor bila kontrak mendukung"]
+    P3 --> P4
+    P2 -.-> E["Validasi atau akses ditolak"]
+    E --> P1
+    P3 -.-> R["Tampilkan status yang telah dikonfirmasi server"]

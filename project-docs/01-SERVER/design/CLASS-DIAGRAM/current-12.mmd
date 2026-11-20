@@ -1,0 +1,106 @@
+classDiagram
+    direction TB
+    class App_Models_AuditLog["AuditLog"] {
+        +user()
+        +auditable()
+    }
+    class App_Models_KontenAboutUs["KontenAboutUs"] {
+    }
+    class App_Models_KontenIcon["KontenIcon"] {
+    }
+    class App_Models_KontenSlideShow["KontenSlideShow"] {
+    }
+    class App_Models_ProductFavorite["ProductFavorite"] {
+        +user()
+        +produk()
+    }
+    class App_Models_ProductSizeStock["ProductSizeStock"] {
+        +produk()
+    }
+    class App_Models_Produk["Produk"] {
+        +reviews()
+        +sizeStocks()
+        +warehouseStocks()
+        +stockMovements()
+        +activeSizeStocks()
+        +stockForSize(size)
+        +getImageUrlAttribute()
+    }
+    class App_Models_Review["Review"] {
+        +user()
+    }
+    class App_Models_ShoppingCard["ShoppingCard"] {
+        +user()
+        +produk()
+    }
+    class App_Models_User["User"] {
+        #casts()
+        +orders()
+        +addresses()
+        +primaryAddress()
+        +pointTransactions()
+        +rewardRedemptions()
+        +supplierProfile()
+        +isMemberActive()
+        +addRewardPoints(points, description, orderId)
+        +redeemReward(reward)
+        -generateMembershipVoucherCode(userId)
+        +updateSpendingAndTier()
+        +calculateMembershipTier()
+        +getTierDiscount()
+        +getTierPointsMultiplier()
+        +getMembershipTierInfoAttribute()
+        +getProfilePicUrlAttribute()
+    }
+    class App_Models_UserAddress["UserAddress"] {
+        +user()
+    }
+    class Illuminate_Database_Eloquent_Model["Model"] {
+    }
+    class App_Models_OrderReview["OrderReview"] {
+    }
+    class App_Models_WarehouseStock["WarehouseStock"] {
+    }
+    class App_Models_StockMovement["StockMovement"] {
+    }
+    class App_Support_AssetUrl["AssetUrl"] {
+    }
+    class Illuminate_Foundation_Auth_User["User"] {
+    }
+    class App_Models_Order["Order"] {
+    }
+    class App_Models_PointTransaction["PointTransaction"] {
+    }
+    class App_Models_UserRewardRedemption["UserRewardRedemption"] {
+    }
+    class App_Models_Supplier["Supplier"] {
+    }
+    App_Models_AuditLog --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_AuditLog --> App_Models_User : relasi
+    App_Models_KontenAboutUs --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_KontenIcon --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_KontenSlideShow --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_ProductFavorite --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_ProductFavorite --> App_Models_User : relasi
+    App_Models_ProductFavorite --> App_Models_Produk : relasi
+    App_Models_ProductSizeStock --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_ProductSizeStock --> App_Models_Produk : relasi
+    App_Models_Produk --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_Produk --> App_Models_OrderReview : relasi
+    App_Models_Produk --> App_Models_ProductSizeStock : relasi
+    App_Models_Produk --> App_Models_WarehouseStock : relasi
+    App_Models_Produk --> App_Models_StockMovement : relasi
+    App_Models_Produk ..> App_Support_AssetUrl : dependensi
+    App_Models_Review --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_Review --> App_Models_User : relasi
+    App_Models_ShoppingCard --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_ShoppingCard --> App_Models_User : relasi
+    App_Models_ShoppingCard --> App_Models_Produk : relasi
+    App_Models_User --|> Illuminate_Foundation_Auth_User : extends
+    App_Models_User --> App_Models_Order : relasi
+    App_Models_User --> App_Models_UserAddress : relasi
+    App_Models_User --> App_Models_PointTransaction : relasi
+    App_Models_User --> App_Models_UserRewardRedemption : relasi
+    App_Models_User --> App_Models_Supplier : relasi
+    App_Models_UserAddress --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_UserAddress --> App_Models_User : relasi

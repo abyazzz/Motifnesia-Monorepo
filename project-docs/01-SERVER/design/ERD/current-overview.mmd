@@ -1,0 +1,240 @@
+erDiagram
+    audit_logs["audit_logs"] {
+        id id PK
+        foreignId user_id FK
+    }
+    cache["cache"] {
+        string key PK
+    }
+    cache_locks["cache_locks"] {
+        string key PK
+    }
+    chat_messages["chat_messages"] {
+        id id PK
+        foreignId chat_id FK
+        foreignId sender_id FK
+    }
+    chats["chats"] {
+        id id PK
+        foreignId user_id FK
+        foreignId admin_id FK
+    }
+    checkout["checkout"] {
+        increments id PK
+        foreignId user_id FK
+        unsignedInteger status_id FK
+    }
+    checkout_items["checkout_items"] {
+        increments id PK
+        unsignedInteger checkout_id FK
+        unsignedInteger product_id FK
+    }
+    delivery_status["delivery_status"] {
+        id id PK
+    }
+    failed_jobs["failed_jobs"] {
+        id id PK
+        string uuid UK
+    }
+    job_batches["job_batches"] {
+        string id PK
+    }
+    jobs["jobs"] {
+        id id PK
+    }
+    konten_about_us["konten_about_us"] {
+        id id PK
+    }
+    konten_icon["konten_icon"] {
+        id id PK
+    }
+    konten_slide_show["konten_slide_show"] {
+        id id PK
+    }
+    membership_rewards["membership_rewards"] {
+        id id PK
+    }
+    metode_pembayaran["metode_pembayaran"] {
+        id id PK
+    }
+    metode_pengiriman["metode_pengiriman"] {
+        id id PK
+    }
+    notifications["notifications"] {
+        id id PK
+        foreignId user_id FK
+    }
+    order_items["order_items"] {
+        id id PK
+        foreignId order_id FK
+        unsignedInteger produk_id FK
+    }
+    order_reviews["order_reviews"] {
+        id id PK
+        foreignId user_id FK
+        foreignId order_item_id FK
+        foreignId order_id FK
+        unsignedInteger produk_id FK
+        foreignId moderated_by FK
+    }
+    order_status_history["order_status_history"] {
+        id id PK
+        foreignId order_id FK
+        foreignId delivery_status_id FK
+    }
+    orders["orders"] {
+        id id PK
+        foreignId user_id FK
+        string order_number UK
+        foreignId metode_pengiriman_id FK
+        foreignId metode_pembayaran_id FK
+        foreignId delivery_status_id FK
+        foreignId membership_redemption_id FK
+    }
+    password_reset_tokens["password_reset_tokens"] {
+        string email PK
+    }
+    personal_access_tokens["personal_access_tokens"] {
+        id id PK
+        string token UK
+    }
+    point_transactions["point_transactions"] {
+        id id PK
+        foreignId user_id FK
+        foreignId order_id FK
+    }
+    product_favorite["product_favorite"] {
+        id id PK
+        foreignId user_id FK
+        unsignedInteger produk_id FK
+    }
+    product_size_stocks["product_size_stocks"] {
+        id id PK
+        unsignedInteger produk_id FK
+    }
+    produk["produk"] {
+        increments id PK
+    }
+    returns["returns"] {
+        id id PK
+        foreignId user_id FK
+        foreignId order_id FK
+        foreignId order_item_id FK
+        unsignedInteger produk_id FK
+    }
+    reviews["reviews"] {
+        id id PK
+        foreignId user_id FK
+    }
+    sessions["sessions"] {
+        string id PK
+    }
+    shopping_card["shopping_card"] {
+        increments id PK
+        unsignedBigInteger user_id FK
+        unsignedInteger product_id FK
+    }
+    status_transaksi["status_transaksi"] {
+        increments id PK
+    }
+    stock_movements["stock_movements"] {
+        id id PK
+        unsignedInteger produk_id FK
+        foreignId user_id FK
+    }
+    stock_opnames["stock_opnames"] {
+        id id PK
+        string opname_number UK
+        unsignedInteger produk_id FK
+        foreignId adjusted_by FK
+    }
+    stock_procurement_items["stock_procurement_items"] {
+        id id PK
+        foreignId stock_procurement_id FK
+        unsignedInteger produk_id FK
+    }
+    stock_procurements["stock_procurements"] {
+        id id PK
+        string procurement_number UK
+        foreignId supplier_id FK
+        foreignId created_by FK
+        foreignId confirmed_by FK
+        foreignId applied_by FK
+    }
+    suppliers["suppliers"] {
+        id id PK
+        foreignId user_id FK
+    }
+    user_addresses["user_addresses"] {
+        id id PK
+        foreignId user_id FK
+    }
+    user_reward_redemptions["user_reward_redemptions"] {
+        id id PK
+        foreignId user_id FK
+        foreignId reward_id FK
+        string voucher_code UK
+    }
+    users["users"] {
+        id id PK
+        string email UK
+        foreignId account_status_changed_by FK
+    }
+    warehouse_stocks["warehouse_stocks"] {
+        id id PK
+        unsignedInteger produk_id FK
+        foreignId updated_by FK
+    }
+    users ||..o{ reviews : "user_id"
+    users |o..o{ shopping_card : "user_id"
+    produk |o..o{ shopping_card : "product_id"
+    users ||..o{ orders : "user_id"
+    metode_pengiriman ||..o{ orders : "metode_pengiriman_id"
+    metode_pembayaran ||..o{ orders : "metode_pembayaran_id"
+    delivery_status ||..o{ orders : "delivery_status_id"
+    orders ||..o{ order_items : "order_id"
+    produk ||..o{ order_items : "produk_id"
+    orders ||..o{ order_status_history : "order_id"
+    delivery_status ||..o{ order_status_history : "delivery_status_id"
+    users ||..o{ product_favorite : "user_id"
+    produk ||..o{ product_favorite : "produk_id"
+    users ||..o{ checkout : "user_id"
+    status_transaksi ||..o{ checkout : "status_id"
+    checkout ||..o{ checkout_items : "checkout_id"
+    produk ||..o{ checkout_items : "product_id"
+    users ||..o{ order_reviews : "user_id"
+    order_items ||..o{ order_reviews : "order_item_id"
+    orders ||..o{ order_reviews : "order_id"
+    produk ||..o{ order_reviews : "produk_id"
+    users |o..o{ notifications : "user_id"
+    users ||..o{ returns : "user_id"
+    orders ||..o{ returns : "order_id"
+    order_items ||..o{ returns : "order_item_id"
+    produk ||..o{ returns : "produk_id"
+    users ||..o{ chats : "user_id"
+    users |o..o{ chats : "admin_id"
+    chats ||..o{ chat_messages : "chat_id"
+    users ||..o{ chat_messages : "sender_id"
+    users ||..o{ user_addresses : "user_id"
+    users ||..o{ point_transactions : "user_id"
+    orders |o..o{ point_transactions : "order_id"
+    users ||..o{ user_reward_redemptions : "user_id"
+    membership_rewards ||..o{ user_reward_redemptions : "reward_id"
+    user_reward_redemptions |o..o{ orders : "membership_redemption_id"
+    users |o..o{ order_reviews : "moderated_by"
+    users |o..o{ users : "account_status_changed_by"
+    produk ||..o{ product_size_stocks : "produk_id"
+    users |o..o{ audit_logs : "user_id"
+    users |o..o{ suppliers : "user_id"
+    suppliers |o..o{ stock_procurements : "supplier_id"
+    users |o..o{ stock_procurements : "created_by"
+    users |o..o{ stock_procurements : "confirmed_by"
+    users |o..o{ stock_procurements : "applied_by"
+    stock_procurements ||..o{ stock_procurement_items : "stock_procurement_id"
+    produk ||..o{ stock_procurement_items : "produk_id"
+    users |o..o{ warehouse_stocks : "updated_by"
+    produk ||..o{ warehouse_stocks : "produk_id"
+    users |o..o{ stock_movements : "user_id"
+    produk ||..o{ stock_movements : "produk_id"
+    users |o..o{ stock_opnames : "adjusted_by"
+    produk ||..o{ stock_opnames : "produk_id"

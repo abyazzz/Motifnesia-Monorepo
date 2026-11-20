@@ -1,0 +1,35 @@
+classDiagram
+    direction TB
+    class PurchaseOrderDocumentService["PROPOSED PurchaseOrderDocumentService"] {
+        +generate()
+        +resolveVersion()
+        +download()
+    }
+    class SupplierConfirmationService["PROPOSED SupplierConfirmationService"] {
+        +recordExternalConfirmation()
+    }
+    class ProcurementReceiptService["PROPOSED ProcurementReceiptService"] {
+        +recordReceipt()
+        +postInventory()
+    }
+    class ReturnInspectionService["PROPOSED ReturnInspectionService"] {
+        +recordInspection()
+        +decideResolution()
+        +recordReplacement()
+    }
+    class RefundRecordingService["PROPOSED RefundRecordingService"] {
+        +recordTransfer()
+        +updateRefundStatus()
+    }
+    class OperationsReportService["PROPOSED OperationsReportService"] {
+        +salesByPaidDate()
+        +inventoryMovements()
+        +procurementReceipts()
+    }
+    class MembershipProgramService["PROPOSED MembershipProgramService"] {
+        +updatePolicy()
+        +reverseAward()
+    }
+    RefundRecordingService ..> MembershipProgramService : dependensi usulan
+    OperationsReportService ..> ProcurementReceiptService : dependensi usulan
+    OperationsReportService ..> RefundRecordingService : dependensi usulan

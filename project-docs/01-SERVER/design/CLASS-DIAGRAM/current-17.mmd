@@ -1,0 +1,31 @@
+classDiagram
+    direction TB
+    class App_Observers_OrderObserver["OrderObserver"] {
+        +created(order)
+        +updated(order)
+    }
+    class App_Observers_ProductObserver["ProductObserver"] {
+        +updated(produk)
+    }
+    class App_Observers_ProductReturnObserver["ProductReturnObserver"] {
+        +created(return)
+        +updated(return)
+        +deleted(return)
+    }
+    class App_Observers_ReviewObserver["ReviewObserver"] {
+        +created(review)
+    }
+    class App_Models_Notification["Notification"] {
+    }
+    class App_Support_WebApi_FrontendUrl["FrontendUrl"] {
+    }
+    class App_Models_Produk["Produk"] {
+    }
+    App_Observers_OrderObserver ..> App_Models_Notification : dependensi
+    App_Observers_OrderObserver ..> App_Support_WebApi_FrontendUrl : dependensi
+    App_Observers_OrderObserver ..> App_Models_Produk : dependensi
+    App_Observers_ProductObserver ..> App_Models_Notification : dependensi
+    App_Observers_ProductReturnObserver ..> App_Models_Notification : dependensi
+    App_Observers_ProductReturnObserver ..> App_Support_WebApi_FrontendUrl : dependensi
+    App_Observers_ReviewObserver ..> App_Models_Notification : dependensi
+    App_Observers_ReviewObserver ..> App_Support_WebApi_FrontendUrl : dependensi

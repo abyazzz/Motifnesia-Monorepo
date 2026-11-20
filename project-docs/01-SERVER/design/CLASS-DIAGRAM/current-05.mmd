@@ -1,0 +1,15 @@
+classDiagram
+    direction TB
+    class App_Http_Controllers_Auth_UserController["UserController"] {
+        +doRegister(request)
+        +doForgot(request)
+    }
+    class App_Http_Controllers_Controller["Controller"] {
+    }
+    class App_Models_User["User"] {
+    }
+    class App_Support_WebApi_FrontendUrl["FrontendUrl"] {
+    }
+    App_Http_Controllers_Auth_UserController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Auth_UserController ..> App_Models_User : dependensi
+    App_Http_Controllers_Auth_UserController ..> App_Support_WebApi_FrontendUrl : dependensi

@@ -1,0 +1,80 @@
+classDiagram
+    direction TB
+    class App_Http_Controllers_Api_ApiProductController["ApiProductController"] {
+        +index(request)
+        +show(id)
+        +store(request)
+        +update(request, id)
+        +destroy(id)
+        +categories()
+        +search(request)
+    }
+    class App_Http_Controllers_Api_ApiProductFavoriteController["ApiProductFavoriteController"] {
+        +index(request)
+        +store(request)
+        +destroy(request, favoriteId)
+        +check(request)
+        +addToCart(request, favoriteId)
+        +count(request)
+    }
+    class App_Http_Controllers_Api_ApiShoppingCardController["ApiShoppingCardController"] {
+        +index(request)
+        +store(request)
+        +update(request, cartId)
+        +destroy(request, cartId)
+        +clear(request)
+        +count(request)
+    }
+    class App_Http_Controllers_Api_ApiUserAddressController["ApiUserAddressController"] {
+        +index(request)
+        +store(request)
+        +show(request, id)
+        +update(request, id)
+        +setPrimary(request, id)
+        +destroy(request, id)
+        +getPrimary(request)
+    }
+    class App_Http_Controllers_Api_ApiUserController["ApiUserController"] {
+        +register(request)
+        +login(request)
+        +profile(request)
+        +updateProfile(request)
+        +logout(request)
+        +index(request)
+        +show(request, id)
+        +destroy(request, id)
+    }
+    class App_Http_Controllers_Api_WebAuthController["WebAuthController"] {
+        +login(request, credentials)
+        +viewer()
+        +logout(request)
+    }
+    class App_Http_Controllers_Controller["Controller"] {
+    }
+    class App_Models_Produk["Produk"] {
+    }
+    class App_Models_ProductFavorite["ProductFavorite"] {
+    }
+    class App_Models_ShoppingCard["ShoppingCard"] {
+    }
+    class App_Models_UserAddress["UserAddress"] {
+    }
+    class App_Models_User["User"] {
+    }
+    class App_Support_WebApi_Viewer["Viewer"] {
+    }
+    App_Http_Controllers_Api_ApiProductController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Api_ApiProductController ..> App_Models_Produk : dependensi
+    App_Http_Controllers_Api_ApiProductFavoriteController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Api_ApiProductFavoriteController ..> App_Models_ProductFavorite : dependensi
+    App_Http_Controllers_Api_ApiProductFavoriteController ..> App_Models_Produk : dependensi
+    App_Http_Controllers_Api_ApiProductFavoriteController ..> App_Models_ShoppingCard : dependensi
+    App_Http_Controllers_Api_ApiShoppingCardController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Api_ApiShoppingCardController ..> App_Models_ShoppingCard : dependensi
+    App_Http_Controllers_Api_ApiShoppingCardController ..> App_Models_Produk : dependensi
+    App_Http_Controllers_Api_ApiUserAddressController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Api_ApiUserAddressController ..> App_Models_UserAddress : dependensi
+    App_Http_Controllers_Api_ApiUserController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Api_ApiUserController ..> App_Models_User : dependensi
+    App_Http_Controllers_Api_WebAuthController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Api_WebAuthController ..> App_Support_WebApi_Viewer : dependensi

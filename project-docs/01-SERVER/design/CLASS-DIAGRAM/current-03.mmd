@@ -1,0 +1,65 @@
+classDiagram
+    direction TB
+    class App_Http_Controllers_Admin_StockOpnameController["StockOpnameController"] {
+        +index(stockInventoryService)
+        +adjust(request, stockInventoryService)
+    }
+    class App_Http_Controllers_Admin_StockProcurementController["StockProcurementController"] {
+        +index(request)
+        +create()
+        +store(request)
+        +show(stockProcurement)
+        +confirmArrived(stockProcurement)
+        +applyStock(stockProcurement, stockInventoryService)
+        -normalizeItems(rawItems)
+        -generateProcurementNumber()
+    }
+    class App_Http_Controllers_Admin_SupplierController["SupplierController"] {
+        +index()
+        +store(request)
+        +update(request, supplier)
+        +destroy(supplier)
+        -validatedSupplier(request, supplier)
+        -syncSupplierUser(supplier, data, password)
+        -uniqueUsername(name)
+    }
+    class App_Http_Controllers_Admin_WarehouseController["WarehouseController"] {
+        +index(stockInventoryService)
+    }
+    class App_Http_Controllers_Controller["Controller"] {
+    }
+    class App_Models_StockOpname["StockOpname"] {
+    }
+    class App_Services_StockInventoryService["StockInventoryService"] {
+    }
+    class App_Models_Produk["Produk"] {
+    }
+    class App_Support_WebApi_FrontendUrl["FrontendUrl"] {
+    }
+    class App_Models_StockProcurement["StockProcurement"] {
+    }
+    class App_Models_Supplier["Supplier"] {
+    }
+    class App_Models_User["User"] {
+    }
+    class App_Models_StockMovement["StockMovement"] {
+    }
+    App_Http_Controllers_Admin_StockOpnameController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_StockOpnameController ..> App_Models_StockOpname : dependensi
+    App_Http_Controllers_Admin_StockOpnameController ..> App_Services_StockInventoryService : dependensi
+    App_Http_Controllers_Admin_StockOpnameController ..> App_Models_Produk : dependensi
+    App_Http_Controllers_Admin_StockOpnameController ..> App_Support_WebApi_FrontendUrl : dependensi
+    App_Http_Controllers_Admin_StockProcurementController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_StockProcurementController ..> App_Models_StockProcurement : dependensi
+    App_Http_Controllers_Admin_StockProcurementController ..> App_Models_Supplier : dependensi
+    App_Http_Controllers_Admin_StockProcurementController ..> App_Models_Produk : dependensi
+    App_Http_Controllers_Admin_StockProcurementController ..> App_Services_StockInventoryService : dependensi
+    App_Http_Controllers_Admin_StockProcurementController ..> App_Support_WebApi_FrontendUrl : dependensi
+    App_Http_Controllers_Admin_SupplierController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_SupplierController ..> App_Models_Supplier : dependensi
+    App_Http_Controllers_Admin_SupplierController ..> App_Support_WebApi_FrontendUrl : dependensi
+    App_Http_Controllers_Admin_SupplierController ..> App_Models_User : dependensi
+    App_Http_Controllers_Admin_WarehouseController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_WarehouseController ..> App_Models_StockProcurement : dependensi
+    App_Http_Controllers_Admin_WarehouseController ..> App_Models_StockMovement : dependensi
+    App_Http_Controllers_Admin_WarehouseController ..> App_Services_StockInventoryService : dependensi

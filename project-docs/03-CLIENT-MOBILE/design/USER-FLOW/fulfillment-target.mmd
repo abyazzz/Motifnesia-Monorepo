@@ -1,0 +1,13 @@
+flowchart LR
+    P1["Gudang catat pengemasan dan resi"]
+    P2["Customer buka pesanan dan konfirmasi tiba"]
+    P1 --> P2
+    P3["Ajukan retur dari item dan unggah bukti"]
+    P2 --> P3
+    P4["Admin cek barang dan opsi resolusi"]
+    P3 --> P4
+    P5["Customer lihat status penggantian atau refund"]
+    P4 --> P5
+    P2 -.-> E["Validasi atau akses ditolak"]
+    E --> P1
+    P3 -.-> R["Tampilkan status yang telah dikonfirmasi server"]

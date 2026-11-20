@@ -1,0 +1,15 @@
+classDiagram
+    direction TB
+    class App_Http_Controllers_Controller["Controller"] {
+        #page(view, data)
+    }
+    class App_Http_Controllers_ProofController["ProofController"] {
+        +payment(order, media)
+        +customerReturn(return, kind, media)
+        +adminReturn(return, kind, media)
+        -returnProof(return, kind, media)
+    }
+    class App_Support_WebApi_Page["Page"] {
+    }
+    App_Http_Controllers_Controller ..> App_Support_WebApi_Page : dependensi
+    App_Http_Controllers_ProofController --|> App_Http_Controllers_Controller : extends

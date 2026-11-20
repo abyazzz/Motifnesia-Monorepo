@@ -1,0 +1,60 @@
+erDiagram
+    audit_logs["audit_logs"] {
+        id id PK
+        foreignId user_id FK
+    }
+    konten_about_us["konten_about_us"] {
+        id id PK
+    }
+    konten_icon["konten_icon"] {
+        id id PK
+    }
+    konten_slide_show["konten_slide_show"] {
+        id id PK
+    }
+    password_reset_tokens["password_reset_tokens"] {
+        string email PK
+    }
+    personal_access_tokens["personal_access_tokens"] {
+        id id PK
+        string token UK
+    }
+    product_favorite["product_favorite"] {
+        id id PK
+        foreignId user_id FK
+        unsignedInteger produk_id FK
+    }
+    product_size_stocks["product_size_stocks"] {
+        id id PK
+        unsignedInteger produk_id FK
+    }
+    produk["produk"] {
+        increments id PK
+    }
+    reviews["reviews"] {
+        id id PK
+        foreignId user_id FK
+    }
+    shopping_card["shopping_card"] {
+        increments id PK
+        unsignedBigInteger user_id FK
+        unsignedInteger product_id FK
+    }
+    user_addresses["user_addresses"] {
+        id id PK
+        foreignId user_id FK
+    }
+    users["users"] {
+        id id PK
+        string email UK
+        foreignId account_status_changed_by FK
+    }
+    users ||..o{ reviews : "user_id"
+    users |o..o{ shopping_card : "user_id"
+    produk |o..o{ shopping_card : "product_id"
+    users ||..o{ product_favorite : "user_id"
+    produk ||..o{ product_favorite : "produk_id"
+    users ||..o{ user_addresses : "user_id"
+    users |o..o{ users : "account_status_changed_by"
+    produk ||..o{ product_size_stocks : "produk_id"
+    users |o..o{ audit_logs : "user_id"

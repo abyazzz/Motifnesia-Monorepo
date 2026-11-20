@@ -1,0 +1,11 @@
+flowchart LR
+    P1["Customer tambah favorit atau buka chat"]
+    P2["Customer yang membeli kirim ulasan"]
+    P1 --> P2
+    P3["Ulasan valid ditampilkan ke publik"]
+    P2 --> P3
+    P4["Kasir atau Owner kelola ulasan terbit"]
+    P3 --> P4
+    P2 -.-> E["Validasi atau akses ditolak"]
+    E --> P1
+    P3 -.-> R["Tampilkan status yang telah dikonfirmasi server"]

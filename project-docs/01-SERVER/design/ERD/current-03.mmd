@@ -1,0 +1,53 @@
+erDiagram
+    stock_movements["stock_movements"] {
+        id id PK
+        unsignedInteger produk_id FK
+        foreignId user_id FK
+    }
+    stock_opnames["stock_opnames"] {
+        id id PK
+        string opname_number UK
+        unsignedInteger produk_id FK
+        foreignId adjusted_by FK
+    }
+    stock_procurement_items["stock_procurement_items"] {
+        id id PK
+        foreignId stock_procurement_id FK
+        unsignedInteger produk_id FK
+    }
+    stock_procurements["stock_procurements"] {
+        id id PK
+        string procurement_number UK
+        foreignId supplier_id FK
+        foreignId created_by FK
+        foreignId confirmed_by FK
+        foreignId applied_by FK
+    }
+    suppliers["suppliers"] {
+        id id PK
+        foreignId user_id FK
+    }
+    warehouse_stocks["warehouse_stocks"] {
+        id id PK
+        unsignedInteger produk_id FK
+        foreignId updated_by FK
+    }
+    produk["produk"] {
+        increments id PK
+    }
+    users["users"] {
+        id id PK
+    }
+    users |o..o{ suppliers : "user_id"
+    suppliers |o..o{ stock_procurements : "supplier_id"
+    users |o..o{ stock_procurements : "created_by"
+    users |o..o{ stock_procurements : "confirmed_by"
+    users |o..o{ stock_procurements : "applied_by"
+    stock_procurements ||..o{ stock_procurement_items : "stock_procurement_id"
+    produk ||..o{ stock_procurement_items : "produk_id"
+    users |o..o{ warehouse_stocks : "updated_by"
+    produk ||..o{ warehouse_stocks : "produk_id"
+    users |o..o{ stock_movements : "user_id"
+    produk ||..o{ stock_movements : "produk_id"
+    users |o..o{ stock_opnames : "adjusted_by"
+    produk ||..o{ stock_opnames : "produk_id"

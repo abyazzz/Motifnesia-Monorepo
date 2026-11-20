@@ -1,0 +1,11 @@
+flowchart LR
+    P1["Customer simpan favorit atau mulai chat"]
+    P2["Buka item yang memenuhi syarat dan isi ulasan"]
+    P1 --> P2
+    P3["Perbarui detail produk setelah ulasan diterima"]
+    P2 --> P3
+    P4["Admin konfirmasi hapus ulasan terbit"]
+    P3 --> P4
+    P2 -.-> E["Validasi atau akses ditolak"]
+    E --> P1
+    P3 -.-> R["Tampilkan status yang telah dikonfirmasi server"]

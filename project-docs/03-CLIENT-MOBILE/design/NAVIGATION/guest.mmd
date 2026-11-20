@@ -1,0 +1,12 @@
+flowchart LR
+    E["Guest"] --> H["Entry Mobile sesuai role"]
+    H --> C1["Akun dan autentikasi"]
+    C1 --> P1["Masuk"]
+    C1 --> P2["Daftar Akun"]
+    C1 --> P3["Atur Ulang Sandi"]
+    H --> C2["Katalog dan pesanan"]
+    C2 --> P4["Koleksi Batik"]
+    C2 --> P5["Detail Produk"]
+    P4 --> P5
+    P1 --> P3
+    P1 --> P2

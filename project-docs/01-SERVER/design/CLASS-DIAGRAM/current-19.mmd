@@ -1,0 +1,79 @@
+classDiagram
+    direction TB
+    class App_Services_AuditLogService["AuditLogService"] {
+        +log(action, model, modelId, details)
+    }
+    class App_Services_MemberNotificationService["MemberNotificationService"] {
+        +sendVoucherNotice(member, title, message, link, data, createInternal)
+        -sendLiveChatNotice(member, title, message)
+        -buildEmailBody(member, title, message, link, data)
+        -sendEmailNotice(member, title, body)
+    }
+    class App_Services_OrderService["OrderService"] {
+        +createOrder(checkoutData, paymentNumber, paymentProof)
+        -lockCheckoutItems(products)
+        -createOrderItems(order, products)
+        -createStatusHistory(orderId, statusId)
+        -reduceProductStock(products)
+        +grantMembershipRewardPoints(order)
+        -markMembershipVoucherUsed(order, voucher)
+        -clearCart(products)
+        -generateOrderNumber()
+        +calculateTotals(products, shippingCost)
+    }
+    class App_Services_ProductService["ProductService"] {
+        +uploadProductImage(file)
+        +deleteProductImage(imagePath)
+        +calculateDiscountedPrice(originalPrice, discountPercent)
+        +prepareProductData(data, imagePath)
+        +normalizeGenderCategory(category)
+        +normalizeSizeStocks(data)
+        +syncSizeStocks(produk, stocks)
+        +stockForSize(produk, size)
+        +formatProductWithRating(product)
+    }
+    class App_Services_ProofMedia["ProofMedia"] {
+        +store(file, kind)
+        +response(path, kind)
+    }
+    class App_Services_StockInventoryService["StockInventoryService"] {
+        +applyProcurement(procurement)
+        +adjustSystemToWarehouse(productId, size, note)
+        +increaseWarehouseAndSystemStock(productId, size, qty, referenceType, referenceId, note)
+        +syncProductTotalStock(productId)
+        +stockMatrix()
+        -generateOpnameNumber()
+    }
+    class App_Services_WebCredentials["WebCredentials"] {
+        +find(username, password)
+    }
+    class App_Models_AuditLog["AuditLog"] {
+    }
+    class App_Models_Notification["Notification"] {
+    }
+    class App_Support_WebApi_FrontendUrl["FrontendUrl"] {
+    }
+    class App_Models_User["User"] {
+    }
+    class App_Models_Chat["Chat"] {
+    }
+    class App_Models_ChatMessage["ChatMessage"] {
+    }
+    class App_Models_Order["Order"] {
+    }
+    class App_Models_ShoppingCard["ShoppingCard"] {
+    }
+    class App_Models_OrderItem["OrderItem"] {
+    }
+    class App_Models_OrderStatusHistory["OrderStatusHistory"] {
+    }
+    App_Services_AuditLogService ..> App_Models_AuditLog : dependensi
+    App_Services_MemberNotificationService ..> App_Models_Notification : dependensi
+    App_Services_MemberNotificationService ..> App_Support_WebApi_FrontendUrl : dependensi
+    App_Services_MemberNotificationService ..> App_Models_User : dependensi
+    App_Services_MemberNotificationService ..> App_Models_Chat : dependensi
+    App_Services_MemberNotificationService ..> App_Models_ChatMessage : dependensi
+    App_Services_OrderService ..> App_Models_Order : dependensi
+    App_Services_OrderService ..> App_Models_ShoppingCard : dependensi
+    App_Services_OrderService ..> App_Models_OrderItem : dependensi
+    App_Services_OrderService ..> App_Models_OrderStatusHistory : dependensi

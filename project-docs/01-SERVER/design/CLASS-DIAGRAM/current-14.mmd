@@ -1,0 +1,109 @@
+classDiagram
+    direction TB
+    class App_Models_Checkout["Checkout"] {
+        +user()
+        +items()
+        +status()
+        +reviews()
+    }
+    class App_Models_CheckoutItem["CheckoutItem"] {
+        +checkout()
+        +produk()
+        +review()
+    }
+    class App_Models_DeliveryStatus["DeliveryStatus"] {
+        +checkouts()
+    }
+    class App_Models_MetodePembayaran["MetodePembayaran"] {
+    }
+    class App_Models_MetodePengiriman["MetodePengiriman"] {
+    }
+    class App_Models_Order["Order"] {
+        +user()
+        +metodePengiriman()
+        +metodePembayaran()
+        +deliveryStatus()
+        +orderItems()
+        +membershipRedemption()
+    }
+    class App_Models_OrderItem["OrderItem"] {
+        +order()
+        +produk()
+        +review()
+        +productReturns()
+    }
+    class App_Models_OrderReview["OrderReview"] {
+        +user()
+        +orderItem()
+        +order()
+        +produk()
+        +moderator()
+        +scopeApproved(query)
+    }
+    class App_Models_OrderStatusHistory["OrderStatusHistory"] {
+        +order()
+        +deliveryStatus()
+    }
+    class App_Models_ProductReturn["ProductReturn"] {
+        +user()
+        +order()
+        +orderItem()
+        +produk()
+        +getStatusColorAttribute()
+        +getTimeAgoAttribute()
+        +canReturnOrder(orderId)
+        +returnDeadlineForOrder(orderId)
+        +hasReturnRequest(orderItemId)
+    }
+    class App_Models_StatusTransaksi["StatusTransaksi"] {
+        +checkouts()
+    }
+    class Illuminate_Database_Eloquent_Model["Model"] {
+    }
+    class App_Models_User["User"] {
+    }
+    class App_Models_Produk["Produk"] {
+    }
+    class App_Models_UserRewardRedemption["UserRewardRedemption"] {
+    }
+    App_Models_Checkout --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_Checkout --> App_Models_User : relasi
+    App_Models_Checkout --> App_Models_CheckoutItem : relasi
+    App_Models_Checkout --> App_Models_StatusTransaksi : relasi
+    App_Models_Checkout --> App_Models_OrderReview : relasi
+    App_Models_CheckoutItem --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_CheckoutItem --> App_Models_Checkout : relasi
+    App_Models_CheckoutItem --> App_Models_Produk : relasi
+    App_Models_CheckoutItem --> App_Models_OrderReview : relasi
+    App_Models_DeliveryStatus --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_DeliveryStatus --> App_Models_Checkout : relasi
+    App_Models_MetodePembayaran --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_MetodePengiriman --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_Order --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_Order --> App_Models_User : relasi
+    App_Models_Order --> App_Models_MetodePengiriman : relasi
+    App_Models_Order --> App_Models_MetodePembayaran : relasi
+    App_Models_Order --> App_Models_DeliveryStatus : relasi
+    App_Models_Order --> App_Models_OrderItem : relasi
+    App_Models_Order --> App_Models_UserRewardRedemption : relasi
+    App_Models_OrderItem --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_OrderItem --> App_Models_Order : relasi
+    App_Models_OrderItem --> App_Models_Produk : relasi
+    App_Models_OrderItem --> App_Models_OrderReview : relasi
+    App_Models_OrderItem --> App_Models_ProductReturn : relasi
+    App_Models_OrderReview --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_OrderReview --> App_Models_User : relasi
+    App_Models_OrderReview --> App_Models_OrderItem : relasi
+    App_Models_OrderReview --> App_Models_Order : relasi
+    App_Models_OrderReview --> App_Models_Produk : relasi
+    App_Models_OrderStatusHistory --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_OrderStatusHistory --> App_Models_Order : relasi
+    App_Models_OrderStatusHistory --> App_Models_DeliveryStatus : relasi
+    App_Models_ProductReturn --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_ProductReturn --> App_Models_User : relasi
+    App_Models_ProductReturn --> App_Models_Order : relasi
+    App_Models_ProductReturn --> App_Models_OrderItem : relasi
+    App_Models_ProductReturn --> App_Models_Produk : relasi
+    App_Models_ProductReturn ..> App_Models_OrderStatusHistory : dependensi
+    App_Models_StatusTransaksi --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_StatusTransaksi --> App_Models_Checkout : relasi

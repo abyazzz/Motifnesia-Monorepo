@@ -1,0 +1,17 @@
+classDiagram
+    direction TB
+    class App_Http_Controllers_Supplier_ProcurementController["ProcurementController"] {
+        +index()
+        +show(procurement)
+        +updateStatus(request, procurement)
+        -currentSupplier()
+    }
+    class App_Http_Controllers_Controller["Controller"] {
+    }
+    class App_Models_StockProcurement["StockProcurement"] {
+    }
+    class App_Models_Supplier["Supplier"] {
+    }
+    App_Http_Controllers_Supplier_ProcurementController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Supplier_ProcurementController ..> App_Models_StockProcurement : dependensi
+    App_Http_Controllers_Supplier_ProcurementController ..> App_Models_Supplier : dependensi

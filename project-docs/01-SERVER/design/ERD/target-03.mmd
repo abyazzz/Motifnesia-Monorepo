@@ -1,0 +1,43 @@
+erDiagram
+    returns["returns"] {
+        existing id PK
+    }
+    return_inspections["PROPOSED return_inspections"] {
+        key id PK
+        ref return_id FK
+        ref inspected_by FK
+        instant inspected_at
+        text condition_code
+        quantity sellable_qty
+        text notes
+    }
+    users["users"] {
+        existing id PK
+    }
+    return_resolutions["PROPOSED return_resolutions"] {
+        key id PK
+        ref return_id FK
+        ref decided_by FK
+        status_code resolution_type
+        ref replacement_item_id FK
+        status_code status
+    }
+    order_items["order_items"] {
+        existing id PK
+    }
+    refund_records["PROPOSED refund_records"] {
+        key id PK
+        ref resolution_id FK
+        ref recorded_by FK
+        amount amount
+        private_object proof_path
+        instant paid_at
+        status_code status
+    }
+    returns ||..o{ return_inspections : "return_id"
+    users ||..o{ return_inspections : "inspected_by"
+    returns ||..o{ return_resolutions : "return_id"
+    users ||..o{ return_resolutions : "decided_by"
+    order_items |o..o{ return_resolutions : "replacement_item_id"
+    return_resolutions ||..o{ refund_records : "resolution_id"
+    users ||..o{ refund_records : "recorded_by"

@@ -1,0 +1,11 @@
+flowchart LR
+    P1["Buka tab Beranda"]
+    P2["Pakai pencarian dan filter layar kecil"]
+    P1 --> P2
+    P3["Ketuk kartu dan pilih varian"]
+    P2 --> P3
+    P4["Gudang atau Owner mengelola produk bila scope rilis disetujui"]
+    P3 --> P4
+    P2 -.-> E["Validasi atau akses ditolak"]
+    E --> P1
+    P3 -.-> R["Tampilkan status yang telah dikonfirmasi server"]

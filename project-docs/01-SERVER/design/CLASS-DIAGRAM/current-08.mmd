@@ -1,0 +1,80 @@
+classDiagram
+    direction TB
+    class App_Http_Controllers_Customer_CheckOutController["CheckOutController"] {
+        +index()
+        +store(request)
+        -formatAddress(user)
+        -formatUserAddress(address)
+        -validateCartItemsStock(cartItems)
+        -availableMemberVouchers(userId)
+        -resolveMemberVoucher(userId, voucherCode)
+        -calculateVoucherDiscount(voucher, subtotalProduk, totalOngkir)
+    }
+    class App_Http_Controllers_Customer_OrderReviewController["OrderReviewController"] {
+        +store(request)
+        +show(orderItemId)
+        -updateProductRating(productId)
+    }
+    class App_Http_Controllers_Customer_PaymentController["PaymentController"] {
+        +index()
+        +store(request, orderService, media)
+        +success(orderId)
+    }
+    class App_Http_Controllers_Customer_PurchaseHistoryController["PurchaseHistoryController"] {
+        +getHistoryData()
+        +confirmArrived(order)
+    }
+    class App_Http_Controllers_Customer_ReturnController["ReturnController"] {
+        +create(orderItemId)
+        +store(request, media)
+        +index()
+        +cancel(id)
+        +submitCourierProof(request, media, id)
+    }
+    class App_Http_Controllers_Customer_ShoppingCardController["ShoppingCardController"] {
+        +index()
+        +add(request)
+        +update(request)
+        +delete(id)
+        +checkout(request)
+    }
+    class App_Http_Controllers_Customer_TransactionController["TransactionController"] {
+        +index()
+        +showPaymentConfirmation()
+    }
+    class App_Http_Controllers_Controller["Controller"] {
+    }
+    class App_Support_WebApi_FrontendUrl["FrontendUrl"] {
+    }
+    class App_Models_ShoppingCard["ShoppingCard"] {
+    }
+    class App_Models_User["User"] {
+    }
+    class App_Models_MetodePengiriman["MetodePengiriman"] {
+    }
+    class App_Models_MetodePembayaran["MetodePembayaran"] {
+    }
+    class App_Support_AssetUrl["AssetUrl"] {
+    }
+    class App_Models_UserRewardRedemption["UserRewardRedemption"] {
+    }
+    class App_Models_OrderItem["OrderItem"] {
+    }
+    class App_Models_OrderReview["OrderReview"] {
+    }
+    App_Http_Controllers_Customer_CheckOutController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_CheckOutController ..> App_Support_WebApi_FrontendUrl : dependensi
+    App_Http_Controllers_Customer_CheckOutController ..> App_Models_ShoppingCard : dependensi
+    App_Http_Controllers_Customer_CheckOutController ..> App_Models_User : dependensi
+    App_Http_Controllers_Customer_CheckOutController ..> App_Models_MetodePengiriman : dependensi
+    App_Http_Controllers_Customer_CheckOutController ..> App_Models_MetodePembayaran : dependensi
+    App_Http_Controllers_Customer_CheckOutController ..> App_Support_AssetUrl : dependensi
+    App_Http_Controllers_Customer_CheckOutController ..> App_Models_UserRewardRedemption : dependensi
+    App_Http_Controllers_Customer_OrderReviewController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_OrderReviewController ..> App_Models_OrderItem : dependensi
+    App_Http_Controllers_Customer_OrderReviewController ..> App_Models_OrderReview : dependensi
+    App_Http_Controllers_Customer_PaymentController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_PurchaseHistoryController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_ReturnController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_ShoppingCardController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_TransactionController --|> App_Http_Controllers_Controller : extends

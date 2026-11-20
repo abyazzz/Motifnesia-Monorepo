@@ -1,0 +1,42 @@
+classDiagram
+    direction TB
+    class App_Support_AssetUrl["AssetUrl"] {
+        +product(path)
+        +profile(path, name)
+        +publicAsset(path, fallback, barePrefix)
+    }
+    class App_Support_WebApi_FrontendUrl["FrontendUrl"] {
+        +path(routeName, parameters)
+        +to(routeName, parameters)
+    }
+    class App_Support_WebApi_Page["Page"] {
+        +response(view, data)
+        -encode(value)
+        -fields(model)
+    }
+    class App_Support_WebApi_Viewer["Viewer"] {
+        +data(user)
+        +home(user)
+    }
+    class App_Models_User["User"] {
+    }
+    class App_Models_Produk["Produk"] {
+    }
+    class App_Models_Notification["Notification"] {
+    }
+    class App_Models_ProductReturn["ProductReturn"] {
+    }
+    class App_Models_StockProcurement["StockProcurement"] {
+    }
+    class App_Models_StockProcurementItem["StockProcurementItem"] {
+    }
+    class App_Models_MembershipReward["MembershipReward"] {
+    }
+    App_Support_WebApi_Page ..> App_Support_WebApi_Viewer : dependensi
+    App_Support_WebApi_Page ..> App_Models_User : dependensi
+    App_Support_WebApi_Page ..> App_Models_Produk : dependensi
+    App_Support_WebApi_Page ..> App_Models_Notification : dependensi
+    App_Support_WebApi_Page ..> App_Models_ProductReturn : dependensi
+    App_Support_WebApi_Page ..> App_Models_StockProcurement : dependensi
+    App_Support_WebApi_Page ..> App_Models_StockProcurementItem : dependensi
+    App_Support_WebApi_Page ..> App_Models_MembershipReward : dependensi

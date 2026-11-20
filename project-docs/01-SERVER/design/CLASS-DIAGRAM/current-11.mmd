@@ -1,0 +1,32 @@
+classDiagram
+    direction TB
+    class App_Http_Requests_AddToCartRequest["AddToCartRequest"] {
+        +authorize()
+        +rules()
+        +attributes()
+        +messages()
+    }
+    class App_Http_Requests_CheckoutRequest["CheckoutRequest"] {
+        +authorize()
+        +rules()
+        +attributes()
+        +messages()
+    }
+    class App_Http_Requests_StoreProductRequest["StoreProductRequest"] {
+        +authorize()
+        +rules()
+        +attributes()
+        +messages()
+    }
+    class App_Http_Requests_UpdateProductRequest["UpdateProductRequest"] {
+        +authorize()
+        +rules()
+        +attributes()
+        +messages()
+    }
+    class Illuminate_Foundation_Http_FormRequest["FormRequest"] {
+    }
+    App_Http_Requests_AddToCartRequest --|> Illuminate_Foundation_Http_FormRequest : extends
+    App_Http_Requests_CheckoutRequest --|> Illuminate_Foundation_Http_FormRequest : extends
+    App_Http_Requests_StoreProductRequest --|> Illuminate_Foundation_Http_FormRequest : extends
+    App_Http_Requests_UpdateProductRequest --|> Illuminate_Foundation_Http_FormRequest : extends

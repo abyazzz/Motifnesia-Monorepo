@@ -1,0 +1,98 @@
+classDiagram
+    direction TB
+    class App_Http_Controllers_Customer_ChatController["ChatController"] {
+        +index()
+        +getOrCreateChat(request)
+        +sendMessage(request)
+        +askProduct(request, productId)
+        +getNewMessages(request, chatId)
+        +closeChat(chatId)
+    }
+    class App_Http_Controllers_Customer_CustomerProductController["CustomerProductController"] {
+        +index(request)
+        +show(id)
+        +liveSearch()
+        -cleanFilterValue(value)
+        -whereNormalizedEquals(query, columns, value)
+        -parsePriceRange(value)
+        -filterOptions()
+        -collectFilterOptions(columns, preferred)
+    }
+    class App_Http_Controllers_Customer_FavoriteController["FavoriteController"] {
+        +index()
+    }
+    class App_Http_Controllers_Customer_MembershipController["MembershipController"] {
+        +index()
+        +register(request)
+        +redeem(rewardId, notifier)
+        +history()
+        +myVouchers()
+    }
+    class App_Http_Controllers_Customer_NotificationController["NotificationController"] {
+        +index()
+        +markAsRead(id)
+        +markAllAsRead()
+    }
+    class App_Http_Controllers_Customer_ProductFavoriteController["ProductFavoriteController"] {
+        +index()
+        +store(request)
+        +destroy(id)
+        +addToCart(favoriteId)
+    }
+    class App_Http_Controllers_Customer_ReviewController["ReviewController"] {
+        +index(productId)
+        +store(request)
+        +update(request, id)
+        +destroy(id)
+    }
+    class App_Http_Controllers_Customer_UserAddressController["UserAddressController"] {
+        +store(request)
+        +update(request, id)
+        +setPrimary(id)
+        +destroy(id)
+    }
+    class App_Http_Controllers_Customer_UserProfileController["UserProfileController"] {
+        +index()
+        +edit()
+        +update(request)
+    }
+    class App_Http_Controllers_Controller["Controller"] {
+    }
+    class App_Models_Chat["Chat"] {
+    }
+    class App_Models_ChatMessage["ChatMessage"] {
+    }
+    class App_Models_Produk["Produk"] {
+    }
+    class App_Support_WebApi_FrontendUrl["FrontendUrl"] {
+    }
+    class App_Models_KontenSlideShow["KontenSlideShow"] {
+    }
+    class App_Services_ProductService["ProductService"] {
+    }
+    class App_Support_AssetUrl["AssetUrl"] {
+    }
+    class App_Models_MembershipReward["MembershipReward"] {
+    }
+    class App_Models_Notification["Notification"] {
+    }
+    App_Http_Controllers_Customer_ChatController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_ChatController ..> App_Models_Chat : dependensi
+    App_Http_Controllers_Customer_ChatController ..> App_Models_ChatMessage : dependensi
+    App_Http_Controllers_Customer_ChatController ..> App_Models_Produk : dependensi
+    App_Http_Controllers_Customer_ChatController ..> App_Support_WebApi_FrontendUrl : dependensi
+    App_Http_Controllers_Customer_CustomerProductController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_CustomerProductController ..> App_Models_KontenSlideShow : dependensi
+    App_Http_Controllers_Customer_CustomerProductController ..> App_Models_Produk : dependensi
+    App_Http_Controllers_Customer_CustomerProductController ..> App_Services_ProductService : dependensi
+    App_Http_Controllers_Customer_CustomerProductController ..> App_Support_AssetUrl : dependensi
+    App_Http_Controllers_Customer_CustomerProductController ..> App_Support_WebApi_FrontendUrl : dependensi
+    App_Http_Controllers_Customer_FavoriteController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_MembershipController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_MembershipController ..> App_Models_MembershipReward : dependensi
+    App_Http_Controllers_Customer_MembershipController ..> App_Models_Notification : dependensi
+    App_Http_Controllers_Customer_NotificationController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_ProductFavoriteController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_ReviewController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_UserAddressController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Customer_UserProfileController --|> App_Http_Controllers_Controller : extends

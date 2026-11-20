@@ -1,0 +1,126 @@
+classDiagram
+    direction TB
+    class App_Http_Controllers_Admin_AdminProductController["AdminProductController"] {
+        +index()
+        +createOrStore(request, productService)
+        +manage()
+        +update(request, id, productService)
+        +destroy(id, productService)
+        -notifyMembersAboutProduct(produk, context)
+    }
+    class App_Http_Controllers_Admin_ChatController["ChatController"] {
+        +middleware()
+        +index(request)
+        +sendMessage(request)
+        +getNewMessages(request, chatId)
+        +getChatList()
+    }
+    class App_Http_Controllers_Admin_CustomerController["CustomerController"] {
+        +index()
+        +destroy(id)
+    }
+    class App_Http_Controllers_Admin_MembershipController["MembershipController"] {
+        +middleware()
+        +index()
+        +updateMemberStatus(request, id)
+        +adjustPoints(request, id)
+        +rewards()
+        +createReward()
+        +storeReward(request)
+        +editReward(id)
+        +updateReward(request, id)
+        +destroyReward(id)
+        +broadcastForm()
+        +broadcast(request, notifier)
+        -validatedRewardData(request)
+    }
+    class App_Http_Controllers_Admin_NotificationController["NotificationController"] {
+        +index(request)
+        +toggleRead(id)
+        +markAllRead()
+        +destroy(id)
+        +clearRead()
+        +create(type, title, message, link, priority)
+    }
+    class App_Http_Controllers_Admin_OrderStatusController["OrderStatusController"] {
+        +index()
+        +updateStatus(request, id)
+        +updatePaymentStatus(request, id, orderService)
+    }
+    class App_Http_Controllers_Admin_ProductReviewController["ProductReviewController"] {
+        +index(request)
+        +show(id)
+        +moderate(request, id)
+        -updateProductRating(productId)
+    }
+    class App_Http_Controllers_Admin_ReportController["ReportController"] {
+        +index(request)
+        -getStartDate(period, endDate)
+        -fillMissingDates(sales, startDate, endDate)
+        +export(request)
+    }
+    class App_Http_Controllers_Admin_ReturnController["ReturnController"] {
+        +middleware()
+        +index(request)
+        +updateStatus(request, id)
+        +destroy(id)
+    }
+    class App_Http_Controllers_Admin_ReviewController["ReviewController"] {
+        +index()
+    }
+    class App_Http_Controllers_Admin_StaticContentController["StaticContentController"] {
+        +middleware()
+        +index()
+        +updateAbout(request)
+        +updateIcon(request)
+        +updateSlideshow(request)
+        +storeSlide(request)
+        +updateSlide(request, id)
+        +deleteSlide(request, id)
+    }
+    class App_Http_Controllers_Controller["Controller"] {
+    }
+    class App_Support_WebApi_FrontendUrl["FrontendUrl"] {
+    }
+    class App_Models_Produk["Produk"] {
+    }
+    class App_Support_AssetUrl["AssetUrl"] {
+    }
+    class App_Models_User["User"] {
+    }
+    class App_Models_Notification["Notification"] {
+    }
+    class App_Models_Chat["Chat"] {
+    }
+    class App_Models_ChatMessage["ChatMessage"] {
+    }
+    class App_Services_AuditLogService["AuditLogService"] {
+    }
+    class App_Models_PointTransaction["PointTransaction"] {
+    }
+    App_Http_Controllers_Admin_AdminProductController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_AdminProductController ..> App_Support_WebApi_FrontendUrl : dependensi
+    App_Http_Controllers_Admin_AdminProductController ..> App_Models_Produk : dependensi
+    App_Http_Controllers_Admin_AdminProductController ..> App_Support_AssetUrl : dependensi
+    App_Http_Controllers_Admin_AdminProductController ..> App_Models_User : dependensi
+    App_Http_Controllers_Admin_AdminProductController ..> App_Models_Notification : dependensi
+    App_Http_Controllers_Admin_ChatController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_ChatController ..> App_Models_Chat : dependensi
+    App_Http_Controllers_Admin_ChatController ..> App_Models_ChatMessage : dependensi
+    App_Http_Controllers_Admin_CustomerController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_CustomerController ..> App_Models_User : dependensi
+    App_Http_Controllers_Admin_CustomerController ..> App_Services_AuditLogService : dependensi
+    App_Http_Controllers_Admin_CustomerController ..> App_Support_WebApi_FrontendUrl : dependensi
+    App_Http_Controllers_Admin_MembershipController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_MembershipController ..> App_Models_User : dependensi
+    App_Http_Controllers_Admin_MembershipController ..> App_Models_Notification : dependensi
+    App_Http_Controllers_Admin_MembershipController ..> App_Support_WebApi_FrontendUrl : dependensi
+    App_Http_Controllers_Admin_MembershipController ..> App_Services_AuditLogService : dependensi
+    App_Http_Controllers_Admin_MembershipController ..> App_Models_PointTransaction : dependensi
+    App_Http_Controllers_Admin_NotificationController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_OrderStatusController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_ProductReviewController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_ReportController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_ReturnController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_ReviewController --|> App_Http_Controllers_Controller : extends
+    App_Http_Controllers_Admin_StaticContentController --|> App_Http_Controllers_Controller : extends

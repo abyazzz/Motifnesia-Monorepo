@@ -1,0 +1,36 @@
+classDiagram
+    direction TB
+    class App_Providers_AppServiceProvider["AppServiceProvider"] {
+        +register()
+        +boot()
+    }
+    class Illuminate_Support_ServiceProvider["ServiceProvider"] {
+    }
+    class App_Models_Order["Order"] {
+    }
+    class App_Observers_OrderObserver["OrderObserver"] {
+    }
+    class App_Models_OrderReview["OrderReview"] {
+    }
+    class App_Observers_ReviewObserver["ReviewObserver"] {
+    }
+    class App_Models_Produk["Produk"] {
+    }
+    class App_Observers_ProductObserver["ProductObserver"] {
+    }
+    class App_Models_ProductReturn["ProductReturn"] {
+    }
+    class App_Observers_ProductReturnObserver["ProductReturnObserver"] {
+    }
+    class App_Models_User["User"] {
+    }
+    App_Providers_AppServiceProvider --|> Illuminate_Support_ServiceProvider : extends
+    App_Providers_AppServiceProvider ..> App_Models_Order : dependensi
+    App_Providers_AppServiceProvider ..> App_Observers_OrderObserver : dependensi
+    App_Providers_AppServiceProvider ..> App_Models_OrderReview : dependensi
+    App_Providers_AppServiceProvider ..> App_Observers_ReviewObserver : dependensi
+    App_Providers_AppServiceProvider ..> App_Models_Produk : dependensi
+    App_Providers_AppServiceProvider ..> App_Observers_ProductObserver : dependensi
+    App_Providers_AppServiceProvider ..> App_Models_ProductReturn : dependensi
+    App_Providers_AppServiceProvider ..> App_Observers_ProductReturnObserver : dependensi
+    App_Providers_AppServiceProvider ..> App_Models_User : dependensi

@@ -1,0 +1,17 @@
+classDiagram
+    direction TB
+    class App_Http_Middleware_AdminMiddleware["AdminMiddleware"] {
+        +handle(request, next)
+    }
+    class App_Http_Middleware_WebApi["WebApi"] {
+        +handle(request, next)
+        -authorizeAndRun(request, next)
+        -run(request, next, state, persist)
+        -localPath(url, request)
+    }
+    class App_Support_WebApi_FrontendUrl["FrontendUrl"] {
+    }
+    class App_Support_WebApi_Viewer["Viewer"] {
+    }
+    App_Http_Middleware_AdminMiddleware ..> App_Support_WebApi_FrontendUrl : dependensi
+    App_Http_Middleware_WebApi ..> App_Support_WebApi_Viewer : dependensi

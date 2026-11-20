@@ -1,0 +1,11 @@
+flowchart LR
+    P1["Customer lihat program dan daftar"]
+    P2["Tukar poin menjadi voucher"]
+    P1 --> P2
+    P3["Kasir atau Owner kelola program dan reward"]
+    P2 --> P3
+    P4["Kelola konten, konfirmasi broadcast dan lihat status"]
+    P3 --> P4
+    P2 -.-> E["Validasi atau akses ditolak"]
+    E --> P1
+    P3 -.-> R["Tampilkan status yang telah dikonfirmasi server"]

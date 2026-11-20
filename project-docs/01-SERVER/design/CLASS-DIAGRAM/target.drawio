@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" compressed="false">
+  <diagram id="p1" name="Akun, ulasan dan komunikasi">
+    <mxGraphModel dx="1422" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2100" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="&lt;b&gt;PROPOSED PasswordRecoveryController&lt;/b&gt;&lt;hr&gt;+requestReset()&lt;br&gt;+confirmReset()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="35" width="330" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="&lt;b&gt;PROPOSED StaffAccessController&lt;/b&gt;&lt;hr&gt;+index()&lt;br&gt;+updateRole()&lt;br&gt;+deactivate()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="455" y="35" width="330" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="&lt;b&gt;PROPOSED ReviewRemovalController&lt;/b&gt;&lt;hr&gt;+destroyPublished()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="880" y="35" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="&lt;b&gt;PROPOSED CustomerNotificationController&lt;/b&gt;&lt;hr&gt;+destroyOwned()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="1305" y="35" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="&lt;b&gt;PROPOSED PromotionBroadcastService&lt;/b&gt;&lt;hr&gt;+prepare()&lt;br&gt;+dispatch()&lt;br&gt;+recordResult()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="220" width="330" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="&lt;b&gt;PROPOSED MembershipProgramService&lt;/b&gt;&lt;hr&gt;+updatePolicy()&lt;br&gt;+reverseAward()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="455" y="220" width="330" height="76" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p2" name="Pesanan, pembayaran dan pengiriman">
+    <mxGraphModel dx="1422" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2100" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="&lt;b&gt;PROPOSED PaymentInitiationController&lt;/b&gt;&lt;hr&gt;+start()&lt;br&gt;+showStatus()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="35" width="330" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="&lt;b&gt;PROPOSED GatewayNotificationController&lt;/b&gt;&lt;hr&gt;+receive()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="455" y="35" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="&lt;b&gt;PROPOSED PaymentGatewayAdapter&lt;/b&gt;&lt;hr&gt;+createAttempt()&lt;br&gt;+validateEvent()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="880" y="35" width="330" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="&lt;b&gt;PROPOSED PaymentReconciliationService&lt;/b&gt;&lt;hr&gt;+recordEvent()&lt;br&gt;+applyConfirmedPayment()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="1305" y="35" width="330" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="&lt;b&gt;PROPOSED StockReservationService&lt;/b&gt;&lt;hr&gt;+reserve()&lt;br&gt;+releaseExpired()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="201" width="330" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="&lt;b&gt;PROPOSED ShipmentService&lt;/b&gt;&lt;hr&gt;+recordPacking()&lt;br&gt;+recordTracking()&lt;br&gt;+confirmReceived()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="455" y="201" width="330" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="1" edge="1" source="n1" target="n3" value="dependensi usulan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" edge="1" source="n1" target="n4" value="dependensi usulan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" edge="1" source="n2" target="n3" value="dependensi usulan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" parent="1" edge="1" source="n2" target="n4" value="dependensi usulan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" parent="1" edge="1" source="n4" target="n5" value="dependensi usulan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p3" name="Pengadaan, purnajual dan laporan">
+    <mxGraphModel dx="1422" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2100" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="&lt;b&gt;PROPOSED PurchaseOrderDocumentService&lt;/b&gt;&lt;hr&gt;+generate()&lt;br&gt;+resolveVersion()&lt;br&gt;+download()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="35" width="330" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="&lt;b&gt;PROPOSED SupplierConfirmationService&lt;/b&gt;&lt;hr&gt;+recordExternalConfirmation()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="455" y="35" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="&lt;b&gt;PROPOSED ProcurementReceiptService&lt;/b&gt;&lt;hr&gt;+recordReceipt()&lt;br&gt;+postInventory()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="880" y="35" width="330" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="&lt;b&gt;PROPOSED ReturnInspectionService&lt;/b&gt;&lt;hr&gt;+recordInspection()&lt;br&gt;+decideResolution()&lt;br&gt;+recordReplacement()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="1305" y="35" width="330" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="&lt;b&gt;PROPOSED RefundRecordingService&lt;/b&gt;&lt;hr&gt;+recordTransfer()&lt;br&gt;+updateRefundStatus()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="30" y="220" width="330" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="&lt;b&gt;PROPOSED OperationsReportService&lt;/b&gt;&lt;hr&gt;+salesByPaidDate()&lt;br&gt;+inventoryMovements()&lt;br&gt;+procurementReceipts()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="455" y="220" width="330" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" vertex="1" value="&lt;b&gt;PROPOSED MembershipProgramService&lt;/b&gt;&lt;hr&gt;+updatePolicy()&lt;br&gt;+reverseAward()" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#fff2cc;strokeColor=#6c8ebf;fontSize=12;">
+          <mxGeometry x="880" y="220" width="330" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="1" edge="1" source="n5" target="n7" value="dependensi usulan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" parent="1" edge="1" source="n6" target="n3" value="dependensi usulan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" parent="1" edge="1" source="n6" target="n5" value="dependensi usulan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

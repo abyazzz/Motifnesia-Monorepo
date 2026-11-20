@@ -1,0 +1,54 @@
+classDiagram
+    direction TB
+    class App_Models_Chat["Chat"] {
+        +user()
+        +admin()
+        +messages()
+        +lastMessage()
+        +unreadCount(userId)
+    }
+    class App_Models_ChatMessage["ChatMessage"] {
+        +chat()
+        +sender()
+    }
+    class App_Models_MembershipReward["MembershipReward"] {
+        +redemptions()
+        +scopeActive(query)
+        +getDiscountLabelAttribute()
+    }
+    class App_Models_Notification["Notification"] {
+        +user()
+        +getIconAttribute()
+        +getPriorityColorAttribute()
+        +getTimeAgoAttribute()
+    }
+    class App_Models_PointTransaction["PointTransaction"] {
+        +user()
+        +order()
+    }
+    class App_Models_UserRewardRedemption["UserRewardRedemption"] {
+        +user()
+        +reward()
+    }
+    class Illuminate_Database_Eloquent_Model["Model"] {
+    }
+    class App_Models_User["User"] {
+    }
+    class App_Models_Order["Order"] {
+    }
+    App_Models_Chat --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_Chat --> App_Models_User : relasi
+    App_Models_Chat --> App_Models_ChatMessage : relasi
+    App_Models_ChatMessage --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_ChatMessage --> App_Models_Chat : relasi
+    App_Models_ChatMessage --> App_Models_User : relasi
+    App_Models_MembershipReward --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_MembershipReward --> App_Models_UserRewardRedemption : relasi
+    App_Models_Notification --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_Notification --> App_Models_User : relasi
+    App_Models_PointTransaction --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_PointTransaction --> App_Models_User : relasi
+    App_Models_PointTransaction --> App_Models_Order : relasi
+    App_Models_UserRewardRedemption --|> Illuminate_Database_Eloquent_Model : extends
+    App_Models_UserRewardRedemption --> App_Models_User : relasi
+    App_Models_UserRewardRedemption --> App_Models_MembershipReward : relasi

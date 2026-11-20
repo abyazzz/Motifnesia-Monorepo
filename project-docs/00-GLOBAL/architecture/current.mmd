@@ -1,0 +1,10 @@
+flowchart LR
+    B["Browser Web"] --> W["Laravel Web / Blade"]
+    W -->|"HTTP(S) API v1 + bearer"| A["Server / WebApi"]
+    F["Flutter Mobile dan Web"] -->|"HTTP(S) API v1 + bearer"| A
+    A --> C["Controller dan service"]
+    C --> D[("Database")]
+    C --> P[("Media dan bukti privat")]
+    A --> L[("Cache draft dan lock")]
+    U["Akun Supplier aktual"] --> B
+    U --> F
