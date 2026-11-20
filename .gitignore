@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-*
+**/storage/framework/sessions/*
+!**/storage/framework/sessions/.gitignore
+/Motifnesia-Server/app/Http/Controllers/Customer.zip
+/Motifnesia-Server/public/images/[0-9]*
+/Motifnesia-Server/public/images/products/
+/Motifnesia-Server/public/images/profiles/
