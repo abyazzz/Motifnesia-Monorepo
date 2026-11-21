@@ -4,6 +4,6 @@ Baca [instruksi global](../00-GLOBAL/AGENTS.md) dan [matriks acuan](../00-GLOBAL
 
 Baca UC/skenario dan API sebelum mengubah layar. Gunakan struktur lib yang mengelompokkan route, core, shared, dan views per role. Temukan file layar melalui registri route. Tautkan UC, skenario, KF, dan bukti implementasi sebelum mengklaim perubahan.
 
-Gunakan Server untuk validasi dan aturan transaksi. Scope rilis admin pada Mobile masih dibahas. Portal Supplier yang aktual memiliki aturan target terpisah. Catat keputusan atau konflik menurut [aturan global](../00-GLOBAL/GLOBAL-RULES.md). Wewenang untuk mengubah kode mengikuti tugas yang disetujui.
+Gunakan Server untuk validasi dan aturan transaksi. Scope bisnis Web dan Mobile 1:1, termasuk kemampuan setiap peran yang berlaku. Akses Supplier target masih memerlukan rekonsiliasi dengan RB-02. Catat keputusan atau konflik menurut [aturan global](../00-GLOBAL/GLOBAL-RULES.md). Wewenang untuk mengubah kode mengikuti tugas yang disetujui.
 
 [SCOPE](SCOPE.md) · [RULES](RULES.md) · [Referensi](REFERENCES-INDEX.md) · [Audit](analysis/AUDIT.md) · [Rancangan](design/SCREEN-SPECIFICATION/README.md)

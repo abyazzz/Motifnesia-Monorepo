@@ -1,6 +1,6 @@
 # Rancangan tambahan Client Mobile · PROPOSED
 
-Rancangan dapat berupa halaman baru, bagian halaman yang sudah ada, atau dialog. Ruang lingkup layar admin pada Mobile menunggu keputusan tim. Usulan pengguna internal tetap ditelusuri untuk pilihan implementasi multi-platform.
+Rancangan dapat berupa halaman baru, bagian halaman yang sudah ada, atau dialog. Kemampuan setiap role di Mobile mengikuti cakupan Web 1:1. Jalur, layout, dan interaksi dapat disesuaikan dengan perangkat.
 
 | Layar | Use Case | Aktor | Jalur masuk | Komponen dan data | Validasi dan error | Kontrak dibutuhkan |
 | --- | --- | --- | --- | --- | --- | --- |

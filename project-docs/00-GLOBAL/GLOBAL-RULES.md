@@ -10,6 +10,10 @@
 
 Penanggung jawab perubahan menyertakan UC/KF/aturan bisnis, bagian kontrak yang terpengaruh, file atau data yang berubah, dampak ke client, dan bukti verifikasi. Untuk perubahan lintas aplikasi, bahas rencana urutan rilis, transisi data dan penanganan client lama dengan anggota terkait. Simpan keputusan penting dan penanggung jawab tindak lanjut di [log keputusan](DECISION-LOG.md).
 
+Lihat [hierarki instruksi](INSTRUCTION-HIERARCHY.md), [review desain](../01-SERVER/analysis/DESIGN-REVIEW.md), dan [analisis scope Mobile](../03-CLIENT-MOBILE/analysis/RELEASE-SCOPE-DECISION.md) sebelum mengubah area terkait.
+
+Scope bisnis kedua client adalah 1:1. Catat perbedaan platform pada layout, navigasi, interaksi, dan UX. Uji role dan kemampuan yang sama pada Web dan Mobile. [Matriks kesetaraan](../PARITAS-WEB-MOBILE.md)
+
 ## Kontrak, keamanan, dan data
 
 - Server mendokumentasikan method, path, autentikasi, izin dan kepemilikan, payload, bentuk respons, status code, serta perilaku pagination dan multipart. Pertahankan kompatibilitas endpoint yang digunakan atau sepakati migrasi versi dengan kedua client.

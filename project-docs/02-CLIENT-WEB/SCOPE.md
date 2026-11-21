@@ -7,3 +7,7 @@ Rancangan mencakup sitemap, spesifikasi halaman, UI dan alur pengguna. Perubahan
 Server menentukan validasi, status transaksi dan izin. Sinkronkan perubahan bentuk data, status dan aksi dengan Server. Tinjau konsistensi istilah dan alur bersama Mobile. Perubahan kontrak lintas scope ditinjau oleh anggota yang memegang implementasi terkait.
 
 [Audit implementasi](analysis/AUDIT.md) · [Rancangan](design/PAGE-SPECIFICATION/README.md) · [Urutan implementasi yang diusulkan](implementation/README.md)
+
+## Kesetaraan lintas client
+
+Target fitur bisnis, KF, UC, aktor, hak akses dan proses adalah 1:1 dengan Mobile. Keduanya memakai API Server yang sama. UI dan pola interaksi disesuaikan dengan platform. Lihat [matriks kesetaraan](../PARITAS-WEB-MOBILE.md) untuk bukti layar saat ini dan gap target.

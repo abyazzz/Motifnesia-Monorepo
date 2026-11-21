@@ -18,11 +18,11 @@
 | O-01 | Vendor gateway, zona waktu bisnis untuk 23.59, callback terlambat, validasi callback, retry/idempotensi, dan rekonsiliasi. | TO-BE §5, RB-05–RB-09, UC-16/20–23 |
 | O-02 | Penomoran/versi PO, pembatalan setelah dikirim, penerimaan berlebih, dan transisi dari login supplier aktif. | TO-BE §5, RB-02/10, UC-28–33 |
 | O-03 | Bukti dan akses refund, aturan biaya/kondisi retur, video, serta kapan dan berapa poin dibalik. | TO-BE §5, RB-12–18, UC-39–46 |
-| O-04 | Yang dirilis di tiap client, termasuk cakupan admin di Mobile, serta urutan transisi Gate untuk kedua client. | TA 64 UC, draft Mobile dan audit route |
+| O-04 | **DIPUTUSKAN oleh pemilik proyek pada Phase 3.** Scope bisnis, KF, UC, aktor dan hak akses Web–Mobile 1:1 dengan API Server bersama. Perbedaan UX/platform diperbolehkan. Akses Supplier target terhadap RB-02 dan transisi portal tetap perlu klarifikasi terpisah. | [Keputusan dan matriks](../03-CLIENT-MOBILE/analysis/RELEASE-SCOPE-DECISION.md) |
 | O-05 | Teknologi chat real-time, layanan email dan retry broadcast, retensi/penghapusan notifikasi, serta format periode/ekspor laporan. | TO-BE §5, UC-47/58–64 |
 | O-06 | Rasio poin, kedaluwarsa poin dan voucher, histori reward, serta mekanisme konfigurasi program membership. | TO-BE §5, KF-16, UC-52–57 |
 | O-07 | Mekanisme pemulihan melalui email, umur token dan sesi yang akan dicabut, serta kebijakan soft-deactivate akun/produk. | UC-03/07/08/13 |
 | O-08 | Transformasi histori metode bayar, mode akses bukti lama, retensi portal lama, dan penghapusan ulasan terbit tanpa merusak audit. | RB-02/05/19, UC-51, data aktual |
-| O-09 | Relasi KF dan proses yang berbeda arah pada TA §2.5.3 dan §3.2.1, termasuk pemetaan multi-KF dan cakupan lintas proses. | [Keterlacakan](TRACEABILITY-MATRIX.md) |
+| O-09 | Klasifikasi delapan UC diselaraskan berdasarkan skenario. Hubungan KF-03 untuk UC-24 dan KF-16 untuk UC-43/44, serta konflik nama UC-42–44 pada prompt, **NEEDS OWNER CONFIRMATION**. | [Rekonsiliasi](UC-KF-RECONCILIATION.md) |
 
 Keputusan teknis di rancangan dengan label `PROPOSED` menunggu review scope terkait. Keputusan bisnis mengikuti pemilik proyek. [Matriks sumber](SOURCE-OF-TRUTH.md) · [TO-BE §5](references/PERANCANGAN%20FINAL%20PROSES%20BISNIS%20TO-BE%20MOTIFNESIA.md)

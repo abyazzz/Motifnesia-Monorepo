@@ -24,3 +24,5 @@ Sumber proses target ada di TO-BE dan TA final. Diagram menawarkan 14 entitas te
 | [target-04.mmd](target-04.mmd) | Membership, broadcast dan akuntabilitas | 3 |
 
 Garis satu-ke-banyak menggambarkan kemungkinan banyak child. Nol atau satu pada sisi parent berarti FK opsional. Indeks unik dan catatan constraint merujuk kamus data. Diagram ini diturunkan dari source dan tidak memeriksa data fisik instalasi lokal.
+
+[Baseline teknis Phase 3](../../analysis/PHASE-3-TECHNICAL-BASELINE.md) menjelaskan status, keputusan TBD dan cakupan pemeriksaan.

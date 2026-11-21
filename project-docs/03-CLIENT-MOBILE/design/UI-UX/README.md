@@ -9,3 +9,5 @@ Pertahankan bahasa visual MotifNesia dan informasi yang dibagikan dengan Web. Gu
 - Navigasi kembali mempertahankan konteks filter. Jika sesi habis, tampilkan jalur login dan tujuan hanya bila akses terverifikasi.
 
 [Spesifikasi layar](../SCREEN-SPECIFICATION/README.md) · [Navigasi per role](../NAVIGATION/README.md)
+
+[Design system](design-system.md) · [Wireframe](wireframes/README.md) · [Review](review/WIREFRAME-REVIEW.md)

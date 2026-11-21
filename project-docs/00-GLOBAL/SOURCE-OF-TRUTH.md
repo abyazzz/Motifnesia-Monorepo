@@ -12,4 +12,8 @@ Hierarki instruksi mengikuti keputusan pemilik proyek terbaru, [AGENTS global](A
 | Implementasi dan kontrak aktual | Route terdaftar, class/migration, Blade dan Dart | [Audit Server](../01-SERVER/analysis/AUDIT.md) · [Audit Web](../02-CLIENT-WEB/analysis/AUDIT.md) · [Audit Mobile](../03-CLIENT-MOBILE/analysis/AUDIT.md) | AS-IMPLEMENTED berdasarkan snapshot Git dan kode lokal yang diaudit. |
 | Aturan pengerjaan | [Prompt terbaru](references/PROMPT%20CODEX.md) | [Working Guidelines 1.0](references/RULES_AND_WORKING_GUIDELINES_v1.0.docx) | Berlaku sesuai mandat pemilik proyek. Tiga scope teknis mengikuti prompt. |
 
-Jika dua sumber berbeda, rekam lokasi, dampak, serta keputusan atau pihak yang perlu mengonfirmasi pada [log keputusan](DECISION-LOG.md). Audit semua dokumen dan keterbatasannya tercatat di [indeks referensi](references/README.md).
+[Rekonsiliasi UC-KF](UC-KF-RECONCILIATION.md) memuat delapan konflik pemetaan untuk persetujuan. Jika dua sumber berbeda, rekam lokasi, dampak, serta keputusan atau pihak yang perlu mengonfirmasi pada [log keputusan](DECISION-LOG.md). Audit semua dokumen dan keterbatasannya tercatat di [indeks referensi](references/README.md).
+
+## Keputusan Phase 3
+
+Instruksi pemilik terbaru menetapkan kesetaraan scope bisnis Web–Mobile 1:1 serta menerima visual Phase 2 untuk dokumentasi saat ini. [Matriks kesetaraan](../PARITAS-WEB-MOBILE.md) · [Baseline](../BASELINE.md). Nama UC-42–44 pada instruksi Phase 3 berbeda dari TA tersimpan. Status akses Supplier target dibandingkan RB-02 dan klasifikasi UC-24/43/44 masih memerlukan konfirmasi. [Rekonsiliasi](UC-KF-RECONCILIATION.md) · [Keputusan](DECISION-LOG.md)

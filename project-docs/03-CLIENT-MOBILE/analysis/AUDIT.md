@@ -14,4 +14,4 @@
 
 ## Kesenjangan target
 
-43 route menyediakan konteks nyata untuk desain. Alur gateway, PO, penerimaan parsial, pemeriksaan retur, refund terpisah, pengelolaan akun internal dan laporan gudang bergantung pada kontrak Server target. Evaluasi cakupan admin pada Android/iOS dan keberlanjutan portal Supplier bersama tim. [Spesifikasi layar](../design/SCREEN-SPECIFICATION/README.md) · [Navigation Map](../design/NAVIGATION/README.md) · [Analisis gap](../../00-GLOBAL/GAP-ANALYSIS.md)
+43 route menyediakan konteks nyata untuk desain. Alur gateway, PO, penerimaan parsial, pemeriksaan retur, refund terpisah, pengelolaan akun internal dan laporan gudang bergantung pada kontrak Server target. Scope target admin setara Web. Kesetaraan implementasi dan pengujian Android/iOS serta keberlanjutan portal Supplier masih perlu diverifikasi. [Spesifikasi layar](../design/SCREEN-SPECIFICATION/README.md) · [Navigation Map](../design/NAVIGATION/README.md) · [Analisis gap](../../00-GLOBAL/GAP-ANALYSIS.md)

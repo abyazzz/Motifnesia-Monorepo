@@ -14,7 +14,7 @@ Jalur dalam diagram aktual mengelompokkan halaman yang dicapai melalui navigasi 
 | Admin Gudang | [diagram aktual](admin-gudang.mmd) | 7 | UC-01, UC-03, UC-04, UC-12, UC-13, UC-24, UC-28, UC-29, UC-30, UC-31, UC-32, UC-33, UC-34, UC-35, UC-36, UC-37, UC-38, UC-42, UC-44, UC-58, UC-63, UC-64 |
 | Supplier | [diagram aktual](supplier.mmd) | 2 | Pihak eksternal pada TO-BE |
 
-Target menempatkan Supplier dan jasa pengiriman di luar sesi pengguna serta gateway sebagai sistem eksternal. Informasi yang dicatat dikirim melalui alur internal. Cakupan rilis Mobile dan transisi akses aktual tetap tercatat di [log keputusan](../../../00-GLOBAL/DECISION-LOG.md).
+Target menempatkan Supplier dan jasa pengiriman di luar sesi pengguna serta gateway sebagai sistem eksternal. Informasi yang dicatat dikirim melalui alur internal. Kesetaraan target dan transisi akses aktual tercatat di [log keputusan](../../../00-GLOBAL/DECISION-LOG.md).
 
 
 ## Navigasi TARGET per aktor
@@ -25,7 +25,7 @@ Node UC memetakan tujuan pengguna. Satu halaman dapat mendukung beberapa UC. Lih
 | --- | --- | --- | --- |
 | Guest | [akses dan tujuan per UC](target-guest.mmd) | 6 | Akses sesuai prakondisi skenario |
 | Customer | [akses dan tujuan per UC](target-customer.mmd) | 30 | Akses sesuai prakondisi skenario |
-| Super Admin Owner | [akses dan tujuan per UC](target-super-admin-owner.mmd) | 37 | Cakupan rilis admin di Mobile menunggu O-04 |
-| Admin Finance | [akses dan tujuan per UC](target-admin-finance.mmd) | 7 | Cakupan rilis admin di Mobile menunggu O-04 |
-| Admin Kasir | [akses dan tujuan per UC](target-admin-kasir.mmd) | 17 | Cakupan rilis admin di Mobile menunggu O-04 |
-| Admin Gudang | [akses dan tujuan per UC](target-admin-gudang.mmd) | 22 | Cakupan rilis admin di Mobile menunggu O-04 |
+| Super Admin Owner | [akses dan tujuan per UC](target-super-admin-owner.mmd) | 37 | Target 1:1 dengan akses Web untuk role yang sama |
+| Admin Finance | [akses dan tujuan per UC](target-admin-finance.mmd) | 7 | Target 1:1 dengan akses Web untuk role yang sama |
+| Admin Kasir | [akses dan tujuan per UC](target-admin-kasir.mmd) | 17 | Target 1:1 dengan akses Web untuk role yang sama |
+| Admin Gudang | [akses dan tujuan per UC](target-admin-gudang.mmd) | 22 | Target 1:1 dengan akses Web untuk role yang sama |

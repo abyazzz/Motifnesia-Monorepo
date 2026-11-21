@@ -38,3 +38,5 @@ Ada 18 class usulan dari gap Use Case. Pilihan menambah class atau memperluas mo
 | [target-03.mmd](target-03.mmd) | Pengadaan, purnajual dan laporan | 6 |
 
 Draw.io memakai tab per modul. Diagram menampilkan relasi waris, dependensi yang dapat dilacak, dan relasi model yang terlihat dalam scope diagram. Inventaris adalah daftar lengkap metode.
+
+[Baseline teknis Phase 3](../../analysis/PHASE-3-TECHNICAL-BASELINE.md) menjelaskan status, keputusan TBD dan cakupan pemeriksaan.

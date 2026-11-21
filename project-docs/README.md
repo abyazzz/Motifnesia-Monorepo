@@ -10,3 +10,5 @@ Baca [ikhtisar](00-GLOBAL/PROJECT-OVERVIEW.md), [sumber acuan](00-GLOBAL/SOURCE-
 | Mobile | [Scope](03-CLIENT-MOBILE/SCOPE.md) · [Audit](03-CLIENT-MOBILE/analysis/AUDIT.md) · [Navigasi](03-CLIENT-MOBILE/design/NAVIGATION/README.md) · [Layar](03-CLIENT-MOBILE/design/SCREEN-SPECIFICATION/README.md) · [Screen Flow](03-CLIENT-MOBILE/design/USER-FLOW/README.md) |
 
 Daftar file tersedia di [inventaris artefak](INVENTARIS.md). Untuk memeriksa salinan referensi, jalankan `sha256sum -c SHA256SUMS` dari direktori ini. Bukti pemeriksaan dan keterbatasan ada di [catatan validasi](00-GLOBAL/VALIDASI.md).
+
+[Baseline proyek Phase 3](BASELINE.md) · [Kesetaraan Web–Mobile](PARITAS-WEB-MOBILE.md) · [Laporan Phase 3](PHASE-3-REVIEW-REPORT.md)

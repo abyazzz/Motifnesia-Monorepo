@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" compressed="false">
+  <diagram id="page1" name="Beranda operasional">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="450" pageHeight="910">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="MOTIFNESIA   |   Beranda operasional" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=16;">
+          <mxGeometry x="20" y="20" width="350" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="Kembali   Beranda operasional" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f8f8f8;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="90" width="350" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="Menu per role" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f7f7f7;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="150" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="Ringkasan pesanan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="220" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="Stok" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="290" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="Notifikasi" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="360" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" vertex="1" value="Buka laporan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="430" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" vertex="1" value="Menu     Pengadaan     Notifikasi     Akun" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=13;">
+          <mxGeometry x="20" y="775" width="350" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page2" name="Kelola produk">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="450" pageHeight="910">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="MOTIFNESIA   |   Kelola produk" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=16;">
+          <mxGeometry x="20" y="20" width="350" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="Kembali   Kelola produk" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f8f8f8;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="90" width="350" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="Cari produk" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f7f7f7;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="150" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="Daftar dan stok" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="220" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="Tambah" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="290" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="Ubah" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="360" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" vertex="1" value="Nonaktifkan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="430" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" vertex="1" value="Menu     Pengadaan     Notifikasi     Akun" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=13;">
+          <mxGeometry x="20" y="775" width="350" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page3" name="Stok dan opname">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="450" pageHeight="910">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="MOTIFNESIA   |   Stok dan opname" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=16;">
+          <mxGeometry x="20" y="20" width="350" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="Kembali   Stok dan opname" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f8f8f8;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="90" width="350" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="Filter produk" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f7f7f7;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="150" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="Stok sistem dan fisik" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="220" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="Selisih" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="290" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="Sesuaikan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="360" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" vertex="1" value="Riwayat" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="430" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" vertex="1" value="Menu     Pengadaan     Notifikasi     Akun" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=13;">
+          <mxGeometry x="20" y="775" width="350" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page4" name="Pengadaan dan PO">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="450" pageHeight="910">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="MOTIFNESIA   |   Pengadaan dan PO" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=16;">
+          <mxGeometry x="20" y="20" width="350" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="Kembali   Pengadaan dan PO" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f8f8f8;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="90" width="350" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="Supplier" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f7f7f7;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="150" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="Daftar pengadaan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="220" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="Buat PO" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="290" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="Unduh PO" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="360" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" vertex="1" value="Catat konfirmasi" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="430" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" vertex="1" value="Menu     Pengadaan     Notifikasi     Akun" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=13;">
+          <mxGeometry x="20" y="775" width="350" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page5" name="Penerimaan barang">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="450" pageHeight="910">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="MOTIFNESIA   |   Penerimaan barang" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=16;">
+          <mxGeometry x="20" y="20" width="350" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="Kembali   Penerimaan barang" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f8f8f8;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="90" width="350" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="PO dan supplier" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f7f7f7;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="150" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="Item dan varian" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="220" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="Jumlah pesan dan sisa" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="290" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="Jumlah diterima" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="360" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" vertex="1" value="Catat penerimaan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="430" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" vertex="1" value="Menu     Pengadaan     Notifikasi     Akun" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=13;">
+          <mxGeometry x="20" y="775" width="350" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page6" name="Kelola pesanan">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="450" pageHeight="910">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="MOTIFNESIA   |   Kelola pesanan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=16;">
+          <mxGeometry x="20" y="20" width="350" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="Kembali   Kelola pesanan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f8f8f8;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="90" width="350" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="Filter pesanan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f7f7f7;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="150" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="Status order" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="220" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="Status bayar" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="290" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="Lihat rincian" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="360" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" vertex="1" value="Tindakan berwenang" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="430" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" vertex="1" value="Menu     Pengadaan     Notifikasi     Akun" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=13;">
+          <mxGeometry x="20" y="775" width="350" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page7" name="Pemenuhan dan pengiriman">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="450" pageHeight="910">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="MOTIFNESIA   |   Pemenuhan dan pengiriman" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=16;">
+          <mxGeometry x="20" y="20" width="350" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="Kembali   Pemenuhan dan pengiriman" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f8f8f8;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="90" width="350" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="Pesanan siap" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f7f7f7;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="150" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="Daftar item" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="220" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="Tandai dikemas" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="290" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="Kurir dan resi" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="360" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" vertex="1" value="Simpan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="430" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" vertex="1" value="Menu     Pengadaan     Notifikasi     Akun" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=13;">
+          <mxGeometry x="20" y="775" width="350" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page8" name="Retur dan refund">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="450" pageHeight="910">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="MOTIFNESIA   |   Retur dan refund" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=16;">
+          <mxGeometry x="20" y="20" width="350" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="Kembali   Retur dan refund" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f8f8f8;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="90" width="350" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="Pengajuan dan bukti" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f7f7f7;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="150" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="Pemeriksaan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="220" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="Resolusi" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="290" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="Refund dan bukti transfer" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="360" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" vertex="1" value="Simpan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="430" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" vertex="1" value="Menu     Pengadaan     Notifikasi     Akun" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=13;">
+          <mxGeometry x="20" y="775" width="350" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page9" name="Laporan">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="450" pageHeight="910">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n1" parent="1" vertex="1" value="MOTIFNESIA   |   Laporan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=16;">
+          <mxGeometry x="20" y="20" width="350" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" vertex="1" value="Kembali   Laporan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f8f8f8;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="90" width="350" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" vertex="1" value="Jenis laporan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#f7f7f7;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="150" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" vertex="1" value="Periode" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="220" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" vertex="1" value="Ringkasan" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="290" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" vertex="1" value="Tabel" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="360" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" vertex="1" value="Ekspor" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#ffffff;strokeColor=#777777;fontSize=15;">
+          <mxGeometry x="20" y="430" width="350" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" vertex="1" value="Menu     Pengadaan     Notifikasi     Akun" style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=middle;spacing=12;fillColor=#eeeeee;strokeColor=#777777;fontSize=13;">
+          <mxGeometry x="20" y="775" width="350" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

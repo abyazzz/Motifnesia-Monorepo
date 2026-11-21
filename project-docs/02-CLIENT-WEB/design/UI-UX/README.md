@@ -8,3 +8,5 @@ Untuk area staf, gunakan navigasi berlandaskan ability. Sediakan tabel ringkas y
 - Informasi penting, seperti batas bayar, status pesanan dan saldo voucher memakai teks dengan semantik yang konsisten di Web dan Mobile.
 - Keadaan kosong membedakan data belum ada dari filter yang tidak menemukan hasil. Validation summary memberi tautan ke input yang bermasalah. Jaga fokus dan aria live ketika form atau hasil AJAX berubah.
 - Pembayaran target memisahkan instruksi bayar, status pending, dan kesuksesan terkonfirmasi. Target supplier mengandalkan kanal eksternal dan pencatatan internal. [Spesifikasi](../PAGE-SPECIFICATION/README.md) · [Sitemap](../SITEMAP/README.md)
+
+[Design system](design-system.md) · [Wireframe](wireframes/README.md) · [Review](review/WIREFRAME-REVIEW.md)

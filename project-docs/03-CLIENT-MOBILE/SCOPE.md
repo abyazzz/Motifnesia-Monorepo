@@ -4,6 +4,6 @@ Anggota Client Mobile bertanggung jawab atas navigasi Flutter, widget, state lay
 
 Rancangan mencakup navigation map, spesifikasi layar, desain komponen dan alur layar. Perubahan mengikuti [traceability](../00-GLOBAL/TRACEABILITY-MATRIX.md) dan [keputusan tim](../00-GLOBAL/DECISION-LOG.md).
 
-Gunakan Server untuk validasi dan aturan transaksi. Scope rilis admin pada Mobile masih dibahas. Portal Supplier yang aktual memiliki aturan target terpisah. Perubahan kontrak lintas scope ditinjau oleh anggota yang memegang implementasi terkait.
+Gunakan Server untuk validasi dan aturan transaksi. Scope bisnis Web dan Mobile 1:1, termasuk kemampuan semua peran yang berlaku. Akses Supplier target masih memerlukan rekonsiliasi dengan RB-02. Perubahan kontrak lintas scope ditinjau oleh anggota yang memegang implementasi terkait.
 
 [Audit implementasi](analysis/AUDIT.md) · [Rancangan](design/SCREEN-SPECIFICATION/README.md) · [Urutan implementasi yang diusulkan](implementation/README.md)

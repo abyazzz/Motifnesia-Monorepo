@@ -12,7 +12,7 @@ MotifNesia adalah platform penjualan pakaian batik untuk Toko Viera. Monorepo in
 
 ## Batas teknis dan koordinasi
 
-- Pertahankan satu API bersama. Cocokkan bentuk input, respons, izin, error, pagination, dan dependensi kedua client sebelum mengubah kontrak.
+- Terapkan scope bisnis Web dan Mobile 1:1 untuk fitur, KF, UC, aktor dan hak akses yang berlaku. Pertahankan satu API bersama. Cocokkan bentuk input, respons, izin, error, pagination, dan dependensi kedua client sebelum mengubah kontrak.
 - Terapkan Sanctum, Gate dan pemeriksaan kepemilikan di server. Client memakai akses untuk navigasi dan memberi umpan balik saat server menolak. Tangani token kedaluwarsa, invalidasi, dan kebijakan unggah sesuai kontrak.
 - Gunakan transaksi untuk operasi atomik dan penanganan retry yang konsisten. Catat mutasi stok, status penting, perubahan poin serta bukti refund sesuai kebutuhan terverifikasi.
 - Lindungi secret, token, konfigurasi lokal, dump, data pribadi, dan bukti transaksi. Gunakan data uji yang terisolasi dan hasil yang telah disanitasi.
@@ -20,4 +20,4 @@ MotifNesia adalah platform penjualan pakaian batik untuk Toko Viera. Monorepo in
 - Jalankan pengujian relevan untuk perubahan implementasi dan catat batas verifikasi. Pembaruan TO-BE, KF, UC atau API perlu diikuti pembaruan traceability dan gap.
 - Dokumentasi menyediakan acuan kerja. Perubahan aplikasi, database, commit, dan push mengikuti wewenang tugas yang diberikan.
 
-Panduan teknis ada di [GLOBAL-RULES](GLOBAL-RULES.md). Peta aplikasi dan acuan scope ada di [PROJECT-OVERVIEW](PROJECT-OVERVIEW.md).
+Untuk pekerjaan implementasi, baca juga AGENTS pada root aplikasi yang dikerjakan. [Hierarki instruksi](INSTRUCTION-HIERARCHY.md) menjelaskan urutannya. Panduan teknis ada di [GLOBAL-RULES](GLOBAL-RULES.md). Peta aplikasi dan acuan scope ada di [PROJECT-OVERVIEW](PROJECT-OVERVIEW.md).
